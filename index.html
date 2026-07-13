@@ -3,208 +3,189 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fresher's Trunk — Hostel Essentials, University of Nairobi</title>
+<title>Fresher's Trunk | Hostel Essentials for University of Nairobi Freshers</title>
+<meta name="description" content="Padlocks, notebooks, noodles and bathroom essentials for University of Nairobi hostel freshers — fairer prices than the campus market, pay on delivery.">
+
+<!-- Open Graph / link preview tags -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fresher's Trunk | Hostel Essentials for UoN Freshers">
+<meta property="og:description" content="Padlocks, notebooks, noodles and bathroom essentials — fairer prices than the campus market. Order on WhatsApp, pay on delivery.">
+<meta property="og:image" content="images/og-cover.jpg">
+<meta property="og:url" content="https://freshers-trunk.example/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fresher's Trunk | Hostel Essentials for UoN Freshers">
+<meta name="twitter:description" content="Padlocks, notebooks, noodles and bathroom essentials — fairer prices than the campus market. Pay on delivery.">
+<meta name="twitter:image" content="images/og-cover.jpg">
+
+<link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#0E2338;
-    --navy-2:#17324F;
-    --gold:#B4892E;
-    --gold-light:#EFDFB8;
-    --paper:#FAF7F0;
-    --paper-2:#F1EBDC;
-    --line:#D8CDB0;
-    --ink:#2A2620;
-    --ink-soft:#615A48;
-    --maroon:#7A2E2E;
-    --forest:#2F5233;
+    --navy:#0A2158; --navy-2:#123170; --gold:#A8203A; --gold-light:#F2D5D9;
+    --paper:#FFFFFF; --paper-2:#F1F4F9; --line:#D9DEE6;
+    --ink:#1B2430; --ink-soft:#5B6472; --maroon:#8C2F2F; --forest:#1F7A45;
   }
   *{box-sizing:border-box;}
-  body{
-    margin:0; background:var(--paper); color:var(--ink);
-    font-family:"Inter",system-ui,sans-serif; -webkit-font-smoothing:antialiased;
-  }
+  html{ scroll-behavior:smooth; }
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:"Inter",system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
   h1,h2,h3,.serif{ font-family:"Fraunces",serif; letter-spacing:-0.01em; }
   .mono{ font-family:"IBM Plex Mono",monospace; }
-  .eyebrow{
-    font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:0.14em;
-    text-transform:uppercase; color:var(--gold);
-  }
+  .eyebrow{ font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); }
+  section{ scroll-margin-top:70px; }
+  .wrap{ max-width:1080px; margin:0 auto; padding:0 24px; }
 
-  /* ================= letterhead header ================= */
-  .letterhead{
-    background:var(--navy); color:var(--paper);
-    border-bottom:4px solid var(--gold);
-  }
-  .letterhead-inner{
-    max-width:1040px; margin:0 auto; padding:0 24px;
-  }
-  .letterhead-top{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:16px 0; border-bottom:1px solid rgba(250,247,240,0.15);
-  }
-  .crest{
-    width:42px; height:42px; border:1.5px solid var(--gold);
-    display:flex; align-items:center; justify-content:center;
-    font-family:"Fraunces",serif; font-weight:600; font-size:15px; color:var(--gold);
-    border-radius:2px; flex:0 0 auto;
-  }
-  .brand-block{ display:flex; align-items:center; gap:12px; }
-  .brand-name{ font-size:15px; font-weight:600; letter-spacing:0.01em; }
-  .brand-sub{ font-size:11px; color:var(--gold-light); font-family:"IBM Plex Mono",monospace; }
-  .cart-pill{
-    background:transparent; border:1px solid var(--gold); color:var(--paper);
-    border-radius:3px; padding:8px 16px; font-size:13px; font-weight:500; cursor:pointer;
-    font-family:"Inter",sans-serif; display:flex; align-items:center; gap:8px;
-  }
-  .cart-pill .n{ font-family:"IBM Plex Mono",monospace; color:var(--gold); }
+  /* ============ urgency banner ============ */
+  .urgency-banner{ background:var(--gold); color:#fff; text-align:center; padding:9px 16px; font-size:12.5px; font-weight:600; font-family:"IBM Plex Mono",monospace; letter-spacing:0.02em; }
 
-  .letterhead-hero{ padding:44px 0 40px; }
-  .letterhead-hero h1{
-    font-size:clamp(30px,4.4vw,44px); line-height:1.08; margin:14px 0 14px; max-width:560px;
-    font-weight:500;
-  }
-  .letterhead-hero h1 em{ font-style:normal; color:var(--gold); }
-  .letterhead-hero p{
-    max-width:520px; color:#D6DCE4; font-size:15.5px; line-height:1.65; margin:0 0 20px;
-  }
-  .contact-strip{
-    display:flex; gap:22px; flex-wrap:wrap; font-size:13px; color:#C7D0DA;
-    border-top:1px solid rgba(250,247,240,0.15); padding-top:16px; margin-top:8px;
-  }
+  /* ============ sticky nav ============ */
+  .topnav{ position:sticky; top:0; z-index:60; background:var(--navy); border-bottom:1px solid rgba(255,255,255,0.12); }
+  .topnav-inner{ max-width:1080px; margin:0 auto; padding:12px 24px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+  .topnav-brand{ display:flex; align-items:center; gap:10px; color:var(--paper); flex:0 0 auto; }
+  .crest{ width:32px; height:32px; border:1.5px solid var(--gold); display:flex; align-items:center; justify-content:center; font-family:"Fraunces",serif; font-weight:600; font-size:12.5px; color:var(--gold); border-radius:2px; }
+  .topnav-brand b{ font-size:14.5px; font-weight:600; }
+  .topnav-links{ display:flex; gap:20px; overflow-x:auto; scrollbar-width:none; }
+  .topnav-links::-webkit-scrollbar{ display:none; }
+  .topnav-links a{ color:#C7D0DA; text-decoration:none; font-size:13.5px; white-space:nowrap; }
+  .topnav-links a:hover{ color:var(--gold-light); }
+  .topnav-cart{ background:transparent; border:1px solid var(--gold); color:var(--paper); border-radius:3px; padding:8px 14px; font-size:13px; font-weight:500; cursor:pointer; display:flex; align-items:center; gap:8px; flex:0 0 auto; }
+  .topnav-cart .n{ font-family:"IBM Plex Mono",monospace; color:var(--gold); }
+
+  /* ============ hero ============ */
+  .hero{ background:var(--navy); color:var(--paper); border-bottom:4px solid var(--gold); }
+  .hero-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:44px; align-items:center; padding:52px 0 48px; }
+  .hero-copy h1{ font-size:clamp(30px,4vw,46px); line-height:1.08; margin:14px 0 16px; font-weight:500; }
+  .hero-copy h1 em{ font-style:normal; color:var(--gold); }
+  .hero-copy p{ font-size:15.5px; line-height:1.65; color:#D6DCE4; max-width:480px; margin:0 0 22px; }
+  .hero-ctas{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:22px; }
+  .btn-gold{ background:var(--gold); color:var(--navy); border:none; padding:13px 22px; font-weight:600; font-size:14px; cursor:pointer; text-decoration:none; display:inline-block; }
+  .btn-ghost{ background:transparent; border:1px solid var(--gold); color:var(--paper); padding:13px 22px; font-weight:500; font-size:14px; cursor:pointer; text-decoration:none; display:inline-block; }
+  .contact-strip{ display:flex; gap:22px; flex-wrap:wrap; font-size:13px; color:#C7D0DA; border-top:1px solid rgba(255,255,255,0.15); padding-top:16px; }
   .contact-strip b{ color:var(--gold-light); font-family:"IBM Plex Mono",monospace; font-weight:600; }
-  .disclaimer{
-    font-size:11.5px; color:#98A5B2; margin-top:12px; max-width:560px; line-height:1.5;
-  }
 
-  /* ================= legend / key ================= */
-  .key-bar{
-    max-width:1040px; margin:0 auto; padding:22px 24px 4px;
-    display:flex; gap:26px; flex-wrap:wrap; font-size:13px; color:var(--ink-soft);
-  }
-  .key-item{ display:flex; align-items:center; gap:8px; }
-  .key-dot{ width:10px; height:10px; border-radius:2px; }
+  .hero-image .image-slot{ aspect-ratio:4/3.2; }
 
-  /* ================= category nav ================= */
-  .cat-nav{
-    max-width:1040px; margin:0 auto; padding:16px 24px 6px;
-    display:flex; gap:10px; overflow-x:auto; scrollbar-width:none;
-  }
-  .cat-nav::-webkit-scrollbar{ display:none; }
-  .cat-chip{
-    flex:0 0 auto; padding:9px 16px; border:1px solid var(--line);
-    font-size:13px; font-weight:500; color:var(--ink-soft); cursor:pointer; white-space:nowrap;
-    background:#fff;
-  }
-  .cat-chip.active{ background:var(--navy); color:var(--paper); border-color:var(--navy); }
+  /* ============ trust ribbon under hero copy ============ */
+  .trust-ribbon{ display:flex; gap:16px; flex-wrap:wrap; margin:0 0 20px; }
+  .trust-pill{ display:flex; align-items:center; gap:7px; background:rgba(255,255,255,0.08); border:1px solid rgba(239,223,184,0.35); padding:7px 12px; font-size:12px; color:var(--gold-light); }
+  .trust-pill .dot{ width:6px; height:6px; border-radius:50%; background:var(--gold); flex:0 0 auto; }
 
-  /* ================= main / product sections ================= */
-  main{ max-width:1040px; margin:0 auto; padding:10px 24px 110px; }
-  .category-block{ margin-top:38px; }
-  .category-head{
-    display:flex; align-items:baseline; gap:14px; border-bottom:2px solid var(--navy);
-    padding-bottom:10px; margin-bottom:20px;
-  }
-  .category-head h2{ font-size:22px; margin:0; font-weight:600; }
-  .category-head .count{ font-size:12px; color:var(--ink-soft); font-family:"IBM Plex Mono",monospace; }
-
-  .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:20px; }
-
-  .card{
-    background:#fff; border:1px solid var(--line); display:flex; flex-direction:column;
-    position:relative;
-  }
-  .card.soon{ opacity:0.92; }
-
-  /* ----- image slot ----- */
-  .image-slot{
-    width:100%; aspect-ratio:4/3; position:relative; background:var(--paper-2);
-    border-bottom:1px solid var(--line); cursor:pointer; overflow:hidden;
-  }
+  /* ============ image slot (reused everywhere) ============ */
+  .image-slot{ width:100%; position:relative; background:var(--paper-2); border:1px solid var(--line); cursor:pointer; overflow:hidden; }
   .image-slot img{ width:100%; height:100%; object-fit:cover; display:block; }
-  .image-slot .placeholder{
-    position:absolute; inset:8px; border:1.5px dashed #BDAF89;
-    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px;
-    color:#9C8F6E;
-  }
-  .image-slot .placeholder .plus{
-    width:26px; height:26px; border:1.5px solid #9C8F6E; border-radius:50%;
-    display:flex; align-items:center; justify-content:center; font-size:16px; line-height:1;
-  }
-  .image-slot .placeholder span{ font-size:11px; font-family:"IBM Plex Mono",monospace; letter-spacing:0.03em; }
+  .image-slot .placeholder{ position:absolute; inset:8px; border:1.5px dashed #B7C0CC; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; color:#7C8797; text-align:center; padding:10px; }
+  .image-slot .placeholder .plus{ width:26px; height:26px; border:1.5px solid #7C8797; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:16px; line-height:1; }
+  .image-slot .placeholder span{ font-size:11px; font-family:"IBM Plex Mono",monospace; letter-spacing:0.02em; }
   .image-slot input[type=file]{ display:none; }
-  .image-slot .corner{ position:absolute; width:10px; height:10px; border-color:var(--gold); }
+  .image-slot .corner{ position:absolute; width:10px; height:10px; }
   .image-slot .corner.tl{ top:6px; left:6px; border-top:1.5px solid var(--gold); border-left:1.5px solid var(--gold); }
   .image-slot .corner.tr{ top:6px; right:6px; border-top:1.5px solid var(--gold); border-right:1.5px solid var(--gold); }
   .image-slot .corner.bl{ bottom:6px; left:6px; border-bottom:1.5px solid var(--gold); border-left:1.5px solid var(--gold); }
   .image-slot .corner.br{ bottom:6px; right:6px; border-bottom:1.5px solid var(--gold); border-right:1.5px solid var(--gold); }
+  /* hero placeholder sits on dark bg */
+  .hero-image .placeholder{ border-color:rgba(239,223,184,0.5); color:var(--gold-light); }
+  .hero-image .placeholder .plus{ border-color:var(--gold-light); }
 
+  /* ============ trust strip ============ */
+  .trust-strip{ background:var(--paper-2); border-bottom:1px solid var(--line); }
+  .trust-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; }
+  .trust-item{ padding:20px 18px; border-left:1px solid var(--line); text-align:center; }
+  .trust-item:first-child{ border-left:none; }
+  .trust-item .num{ font-family:"Fraunces",serif; font-size:20px; font-weight:600; color:var(--navy); }
+  .trust-item .lbl{ font-size:12px; color:var(--ink-soft); margin-top:4px; }
+
+  /* ============ social proof strip ============ */
+  .proof-strip{ padding:14px 0; text-align:center; background:#fff; border-bottom:1px solid var(--line); }
+  .proof-strip p{ margin:0; font-size:13px; color:var(--ink-soft); }
+  .proof-strip b{ color:var(--navy); }
+
+  /* ============ generic section head ============ */
+  .section-head{ max-width:620px; margin:0 auto 34px; text-align:center; }
+  .section-head .eyebrow{ display:block; margin-bottom:10px; }
+  .section-head h2{ font-size:clamp(24px,3.2vw,32px); margin:0 0 10px; font-weight:600; }
+  .section-head p{ color:var(--ink-soft); font-size:14.5px; line-height:1.6; margin:0; }
+
+  /* ============ about ============ */
+  .about-section{ padding:64px 0; border-bottom:1px solid var(--line); }
+  .about-grid{ display:grid; grid-template-columns:0.85fr 1.15fr; gap:44px; align-items:start; }
+  .about-grid .image-slot{ aspect-ratio:1/1; }
+  .about-points{ list-style:none; margin:20px 0 0; padding:0; display:grid; gap:12px; }
+  .about-points li{ display:flex; gap:10px; font-size:14px; line-height:1.5; color:var(--ink); }
+  .about-points li::before{ content:"✦"; color:var(--gold); flex:0 0 auto; }
+
+  /* ============ key + nav for shop ============ */
+  .key-bar{ padding:20px 0 4px; display:flex; gap:26px; flex-wrap:wrap; font-size:13px; color:var(--ink-soft); }
+  .key-item{ display:flex; align-items:center; gap:8px; }
+  .key-dot{ width:10px; height:10px; border-radius:2px; }
+  .cat-nav{ padding:16px 0 6px; display:flex; gap:10px; overflow-x:auto; scrollbar-width:none; }
+  .cat-nav::-webkit-scrollbar{ display:none; }
+  .cat-chip{ flex:0 0 auto; padding:9px 16px; border:1px solid var(--line); font-size:13px; font-weight:500; color:var(--ink-soft); cursor:pointer; white-space:nowrap; background:#fff; }
+  .cat-chip.active{ background:var(--navy); color:var(--paper); border-color:var(--navy); }
+
+  .shop-section{ padding:20px 0 68px; border-bottom:1px solid var(--line); }
+  .category-block{ margin-top:38px; }
+  .category-head{ display:flex; align-items:baseline; gap:14px; border-bottom:2px solid var(--navy); padding-bottom:10px; margin-bottom:20px; }
+  .category-head h2{ font-size:22px; margin:0; font-weight:600; }
+  .category-head .count{ font-size:12px; color:var(--ink-soft); font-family:"IBM Plex Mono",monospace; }
+  .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:20px; }
+  .card{ background:#fff; border:1px solid var(--line); display:flex; flex-direction:column; position:relative; }
+  .card.soon{ opacity:0.92; }
+  .card .image-slot{ aspect-ratio:4/3; border-bottom:1px solid var(--line); border-left:none; border-right:none; border-top:none; }
   .card-body{ padding:16px; display:flex; flex-direction:column; gap:10px; flex:1; }
   .card-name{ font-weight:600; font-size:15.5px; margin:0; font-family:"Fraunces",serif; }
   .card-note{ font-size:12px; color:var(--ink-soft); margin-top:-6px; }
-
-  .price-tag{
-    border:1px solid var(--line); border-left:3px solid var(--navy);
-    padding:10px 12px; display:flex; align-items:center; justify-content:space-between; gap:8px;
-  }
+  .price-tag{ border:1px solid var(--line); border-left:3px solid var(--navy); padding:10px 12px; display:flex; align-items:center; justify-content:space-between; gap:8px; }
   .price-tag .prices{ display:flex; flex-direction:column; }
-  .clabu-price{
-    font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--maroon);
-    text-decoration:line-through; text-decoration-thickness:1.5px;
-  }
+  .clabu-price{ font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--maroon); text-decoration:line-through; text-decoration-thickness:1.5px; }
   .our-price{ font-family:"IBM Plex Mono",monospace; font-size:19px; font-weight:600; color:var(--navy); }
-  .save-badge{
-    background:var(--forest); color:#fff; font-size:10.5px; font-weight:600;
-    padding:4px 9px; white-space:nowrap; font-family:"IBM Plex Mono",monospace;
-  }
-  .same-price-badge{
-    background:var(--ink-soft); color:var(--paper); font-size:10.5px; font-weight:500;
-    padding:4px 9px; white-space:nowrap;
-  }
-
-  .add-btn{
-    background:var(--navy); color:var(--paper); border:none; padding:11px; font-weight:500;
-    font-size:13.5px; cursor:pointer; font-family:"Inter",sans-serif;
-  }
-  .add-btn.added{ background:var(--forest); }
-  .qty-row{
-    display:flex; align-items:center; justify-content:space-between;
-    background:var(--navy); padding:7px 10px;
-  }
-  .qty-row button{
-    background:var(--gold); color:var(--navy); border:none; width:26px;height:26px;
-    font-weight:700; font-size:15px; cursor:pointer;
-  }
+  .save-badge{ background:var(--forest); color:#fff; font-size:10.5px; font-weight:600; padding:4px 9px; white-space:nowrap; font-family:"IBM Plex Mono",monospace; }
+  .same-price-badge{ background:var(--ink-soft); color:var(--paper); font-size:10.5px; font-weight:500; padding:4px 9px; white-space:nowrap; }
+  .add-btn{ background:var(--navy); color:var(--paper); border:none; padding:11px; font-weight:500; font-size:13.5px; cursor:pointer; font-family:"Inter",sans-serif; }
+  .qty-row{ display:flex; align-items:center; justify-content:space-between; background:var(--navy); padding:7px 10px; }
+  .qty-row button{ background:var(--gold); color:var(--navy); border:none; width:26px;height:26px; font-weight:700; font-size:15px; cursor:pointer; }
   .qty-row span{ color:var(--paper); font-family:"IBM Plex Mono",monospace; font-weight:600; }
-  .coming-soon-btn{
-    background:transparent; border:1px solid var(--navy); color:var(--navy);
-    padding:11px; font-weight:500; font-size:13px; cursor:pointer; font-family:"Inter",sans-serif;
-  }
+  .coming-soon-btn{ background:transparent; border:1px solid var(--navy); color:var(--navy); padding:11px; font-weight:500; font-size:13px; cursor:pointer; font-family:"Inter",sans-serif; }
 
-  /* ================= floating cart ================= */
-  .floating-cart{
-    position:fixed; bottom:20px; left:50%; transform:translateX(-50%);
-    background:var(--navy); color:var(--paper); border:1px solid var(--gold);
-    padding:14px 24px; display:flex; align-items:center; gap:14px; z-index:40; cursor:pointer;
-    font-family:"Inter",sans-serif;
-  }
-  .floating-cart .badge{
-    background:var(--gold); color:var(--navy); padding:2px 10px; font-size:12.5px;
-    font-weight:600; font-family:"IBM Plex Mono",monospace;
-  }
+  /* ============ how it works ============ */
+  .how-section{ padding:64px 0; border-bottom:1px solid var(--line); background:var(--paper-2); }
+  .how-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .how-step{ background:#fff; border:1px solid var(--line); padding:26px 22px; position:relative; }
+  .how-step .step-num{ font-family:"Fraunces",serif; font-size:34px; font-weight:600; color:var(--gold); line-height:1; margin-bottom:12px; }
+  .how-step h3{ font-size:16.5px; margin:0 0 8px; font-weight:600; }
+  .how-step p{ font-size:13.5px; color:var(--ink-soft); line-height:1.55; margin:0; }
+
+  /* ============ FAQ ============ */
+  .faq-section{ padding:64px 0; border-bottom:1px solid var(--line); }
+  .faq-list{ max-width:720px; margin:0 auto; }
+  .faq-list details{ border-bottom:1px solid var(--line); padding:16px 0; }
+  .faq-list summary{ cursor:pointer; font-weight:600; font-size:14.5px; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+  .faq-list summary::-webkit-details-marker{ display:none; }
+  .faq-list summary::after{ content:"+"; font-family:"IBM Plex Mono",monospace; font-size:18px; color:var(--gold); flex:0 0 auto; }
+  .faq-list details[open] summary::after{ content:"−"; }
+  .faq-list p{ font-size:13.5px; color:var(--ink-soft); line-height:1.6; margin:10px 0 0; }
+
+  /* ============ footer ============ */
+  footer{ background:var(--navy); color:#C7D0DA; padding:48px 0 24px; }
+  .footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:36px; margin-bottom:32px; }
+  .footer-brand{ display:flex; align-items:center; gap:10px; color:var(--paper); margin-bottom:12px; }
+  .footer-brand b{ font-size:15px; font-weight:600; }
+  .footer-grid p{ font-size:13px; line-height:1.6; max-width:320px; }
+  .footer-grid h4{ font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--gold-light); margin:0 0 12px; font-weight:600; }
+  .footer-grid ul{ list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+  .footer-grid a{ color:#C7D0DA; text-decoration:none; font-size:13px; }
+  .footer-grid a:hover{ color:var(--gold-light); }
+  .footer-bottom{ border-top:1px solid rgba(255,255,255,0.15); padding-top:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:12px; color:#8FA0AF; }
+  .footer-bottom button{ background:none; border:none; color:#8FA0AF; font-size:12px; cursor:pointer; text-decoration:underline; }
+
+  /* ============ floating cart + drawer ============ */
+  .floating-cart{ position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:var(--navy); color:var(--paper); border:1px solid var(--gold); padding:14px 24px; display:flex; align-items:center; gap:14px; z-index:55; cursor:pointer; font-family:"Inter",sans-serif; }
+  .floating-cart .badge{ background:var(--gold); color:var(--navy); padding:2px 10px; font-size:12.5px; font-weight:600; font-family:"IBM Plex Mono",monospace; }
   .floating-cart .total{ font-family:"IBM Plex Mono",monospace; font-weight:600; }
   .floating-cart[hidden]{ display:none; }
-
-  /* ================= drawer ================= */
-  .overlay{ position:fixed; inset:0; background:rgba(14,35,56,0.55); z-index:50;
-    display:flex; align-items:flex-end; justify-content:center; }
+  .overlay{ position:fixed; inset:0; background:rgba(14,35,56,0.55); z-index:70; display:flex; align-items:flex-end; justify-content:center; }
   .overlay[hidden]{ display:none; }
-  .drawer{
-    background:var(--paper); width:100%; max-width:540px; max-height:86vh;
-    padding:24px; overflow-y:auto; border-top:3px solid var(--gold);
-  }
+  .drawer{ background:var(--paper); width:100%; max-width:540px; max-height:86vh; padding:24px; overflow-y:auto; border-top:3px solid var(--gold); }
   .drawer-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; }
   .drawer-head h3{ margin:0; font-size:20px; font-weight:600; }
   .close-btn{ background:none; border:none; font-size:24px; color:var(--ink-soft); cursor:pointer; }
@@ -217,55 +198,237 @@
   .cart-empty{ text-align:center; padding:34px 10px; color:var(--ink-soft); font-size:14px; }
   .cart-total-row{ display:flex; justify-content:space-between; align-items:center; padding:18px 0 8px; font-size:16.5px; font-weight:600; }
   .cart-total-row .val{ font-family:"IBM Plex Mono",monospace; }
-  .confirm-btn{
-    width:100%; background:#1E7A45; color:#fff; border:none; padding:15px; font-weight:600;
-    font-size:15px; cursor:pointer; margin-top:10px; font-family:"Inter",sans-serif;
-  }
-  .fine-print{ font-size:11.5px; color:var(--ink-soft); text-align:center; margin-top:10px; }
 
-  footer{
-    text-align:center; padding:30px 20px 44px; color:var(--ink-soft); font-size:12px;
-    border-top:1px solid var(--line); margin-top:20px;
+  /* ============ customer details form in drawer ============ */
+  .customer-fields{ display:grid; gap:10px; margin:16px 0 4px; padding-top:14px; border-top:1px dashed var(--line); }
+  .customer-fields label{ font-size:11.5px; font-weight:600; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.04em; display:block; margin-bottom:4px; }
+  .customer-fields input{ width:100%; padding:10px 12px; border:1px solid var(--line); font-size:14px; font-family:"Inter",sans-serif; background:#fff; }
+  .customer-fields input:focus{ outline:none; border-color:var(--navy); }
+  .field-row{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .field-error{ font-size:11.5px; color:var(--maroon); margin-top:4px; display:none; }
+  .field-error.show{ display:block; }
+
+  .confirm-btn{ width:100%; background:#1E7A45; color:#fff; border:none; padding:15px; font-weight:600; font-size:15px; cursor:pointer; margin-top:14px; font-family:"Inter",sans-serif; }
+  .confirm-btn:disabled{ background:#9BB3A6; cursor:not-allowed; }
+  .fine-print{ font-size:11.5px; color:var(--ink-soft); text-align:center; margin-top:10px; }
+  .cod-note{ background:var(--paper-2); border:1px solid var(--line); padding:10px 12px; font-size:12px; color:var(--ink-soft); margin-top:10px; display:flex; gap:8px; align-items:flex-start; }
+  .cod-note .tick{ color:var(--forest); font-weight:700; flex:0 0 auto; }
+
+  /* ============ admin ============ */
+  .admin-drawer{ background:var(--paper); width:100%; max-width:760px; max-height:90vh; padding:26px; overflow-y:auto; border-top:3px solid var(--gold); }
+  .admin-stats{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:18px 0 22px; }
+  .admin-stat{ background:#fff; border:1px solid var(--line); padding:16px; }
+  .admin-stat .lbl{ font-size:11.5px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.05em; }
+  .admin-stat .val{ font-family:"Fraunces",serif; font-size:24px; font-weight:600; color:var(--navy); margin-top:4px; }
+  table.admin-table{ width:100%; border-collapse:collapse; font-size:13px; }
+  table.admin-table th, table.admin-table td{ text-align:left; padding:9px 8px; border-bottom:1px solid var(--line); }
+  table.admin-table th{ font-family:"IBM Plex Mono",monospace; font-size:11px; text-transform:uppercase; color:var(--ink-soft); }
+  .admin-empty{ text-align:center; padding:30px; color:var(--ink-soft); font-size:14px; }
+  .admin-clear{ margin-top:16px; background:transparent; border:1px solid var(--maroon); color:var(--maroon); padding:9px 16px; font-size:12.5px; cursor:pointer; }
+  .admin-sync-note{ font-size:12px; padding:10px 12px; margin-top:14px; border:1px solid var(--line); background:var(--paper-2); color:var(--ink-soft); }
+  .admin-sync-note.ok{ border-color:var(--forest); color:var(--forest); }
+  .admin-sync-note.warn{ border-color:var(--gold); color:var(--maroon); }
+
+  @media (max-width:820px){
+    .hero-grid{ grid-template-columns:1fr; }
+    .about-grid{ grid-template-columns:1fr; }
+    .trust-grid{ grid-template-columns:repeat(2,1fr); }
+    .trust-item:nth-child(3){ border-left:none; }
+    .how-grid{ grid-template-columns:1fr; }
+    .footer-grid{ grid-template-columns:1fr; }
+    .topnav-links{ display:none; }
+    .field-row{ grid-template-columns:1fr; }
   }
 </style>
 </head>
 <body>
 
-<div class="letterhead">
-  <div class="letterhead-inner">
-    <div class="letterhead-top">
-      <div class="brand-block">
-        <div class="crest">FT</div>
-        <div>
-          <div class="brand-name">Fresher's Trunk</div>
-          <div class="brand-sub">HOSTEL ESSENTIALS — UNIVERSITY OF NAIROBI</div>
-        </div>
-      </div>
-      <button class="cart-pill" onclick="openCart()">Order list <span class="n" id="headerCount">0</span></button>
+<div class="urgency-banner" id="urgencyBanner">Move-in week special — stocked and delivering now for the 2026/2027 intake</div>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <div class="topnav-brand"><div class="crest">FT</div><b>Fresher's Trunk</b></div>
+    <div class="topnav-links">
+      <a href="#about">About</a>
+      <a href="#shop">Shop</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
     </div>
-    <div class="letterhead-hero">
-      <span class="eyebrow">2026/2027 INTAKE — FRESHERS' SUPPLIES</span>
+    <button class="topnav-cart" onclick="openCart()">Order list <span class="n" id="headerCount">0</span></button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">2026/2027 intake · freshers' supplies</span>
       <h1>Everything for your hostel room, priced honestly for <em>UoN freshers.</em></h1>
-      <p>Padlocks, notebooks, noodles and bathroom essentials — the same items sold at the campus market, delivered to your hostel at a fairer price. Confirm your order and pay when it reaches you.</p>
+      <p>Padlocks, notebooks, noodles and bathroom essentials — the same items sold at the campus market, delivered to your hostel at a fairer price. Add what you need, confirm on WhatsApp, and pay only once it's in your hands.</p>
+      <div class="trust-ribbon">
+        <div class="trust-pill"><span class="dot"></span>Pay only on delivery</div>
+        <div class="trust-pill"><span class="dot"></span>No deposit, no upfront transfer</div>
+        <div class="trust-pill"><span class="dot"></span>Real person on WhatsApp</div>
+      </div>
+      <div class="hero-ctas">
+        <a href="#shop" class="btn-gold">Shop essentials</a>
+        <a href="https://wa.me/254713781789?text=Hi%20Fresher's%20Trunk%2C%20I%20have%20a%20question." class="btn-ghost" target="_blank">WhatsApp us</a>
+      </div>
       <div class="contact-strip">
-        <span>Order confirmation via WhatsApp: <b>0713 781 789</b></span>
+        <span>Order via WhatsApp: <b>0713 781 789</b></span>
         <span>Payment: <b>On delivery</b></span>
         <span>Delivery: <b>Hall / hostel drop-off</b></span>
       </div>
-      <p class="disclaimer">Fresher's Trunk is an independent, student-run supply service serving the University of Nairobi community. It is not an official University of Nairobi enterprise.</p>
+    </div>
+    <div class="hero-image">
+      <div class="image-slot" onclick="document.getElementById('file-hero').click()">
+        <div class="placeholder" id="ph-hero">
+          <div class="plus">+</div>
+          <span>images/hero.jpg — hostel or product photo</span>
+        </div>
+        <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+        <input type="file" accept="image/*" id="file-hero" onchange="handleGenericUpload(event,'ph-hero')">
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="key-bar">
-  <div class="key-item"><span class="key-dot" style="background:var(--maroon)"></span> Campus market price</div>
-  <div class="key-item"><span class="key-dot" style="background:var(--forest)"></span> You save with us</div>
-  <div class="key-item"><span class="key-dot" style="background:var(--ink-soft)"></span> Essential — same price everywhere</div>
-</div>
+<section class="trust-strip">
+  <div class="wrap trust-grid">
+    <div class="trust-item"><div class="num">0%</div><div class="lbl">Markup on noodles &amp; essentials</div></div>
+    <div class="trust-item"><div class="num">6</div><div class="lbl">Items stocked for hostel move-in</div></div>
+    <div class="trust-item"><div class="num">On delivery</div><div class="lbl">You pay only once it arrives</div></div>
+    <div class="trust-item"><div class="num">&lt; 1 hr</div><div class="lbl">Typical WhatsApp response</div></div>
+  </div>
+</section>
 
-<nav class="cat-nav" id="catNav"></nav>
+<section class="proof-strip">
+  <p>Trusted by freshers moving into halls this intake — <b>ask us for references from students in your hall</b> before you order, any time.</p>
+</section>
 
-<main id="main"></main>
+<section class="about-section" id="about">
+  <div class="wrap about-grid">
+    <div class="image-slot" onclick="document.getElementById('file-about').click()">
+      <div class="placeholder" id="ph-about">
+        <div class="plus">+</div>
+        <span>images/about.jpg — team or stock photo</span>
+      </div>
+      <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+      <input type="file" accept="image/*" id="file-about" onchange="handleGenericUpload(event,'ph-about')">
+    </div>
+    <div>
+      <span class="eyebrow">Who we are</span>
+      <h2 style="font-size:28px; font-weight:600; margin:12px 0 12px;">Run by students, for students</h2>
+      <p style="font-size:14.5px; line-height:1.65; color:var(--ink-soft); max-width:520px;">Fresher's Trunk started with a simple observation: the small campus stalls that freshers rely on in their first week charge more than they need to for the same padlocks, notebooks and bathroom basics. We stock the same essentials and pass on the difference — while still running a fair, sustainable business.</p>
+      <p style="font-size:14.5px; line-height:1.65; color:var(--ink-soft); max-width:520px;">We know first week is when trust matters most, which is why we don't ask for any payment upfront — you only pay once your order is physically in your hands and you've checked it's correct.</p>
+      <ul class="about-points">
+        <li>Prices checked against the campus market for every item we list</li>
+        <li>No markup on true essentials like noodles — priced to match, not to profit</li>
+        <li>Order confirmed by a real person on WhatsApp, not an automated system</li>
+        <li>Delivery straight to your hall or hostel — no trip to the stalls required</li>
+        <li>Zero upfront payment — nothing changes hands until your order is in front of you</li>
+      </ul>
+      <p class="disclaimer" style="font-size:11.5px; color:var(--ink-soft); margin-top:18px; max-width:520px; line-height:1.5;">Fresher's Trunk is an independent, student-run supply service serving the University of Nairobi community. It is not an official University of Nairobi enterprise.</p>
+    </div>
+  </div>
+</section>
+
+<section class="shop-section" id="shop">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The range</span>
+      <h2>Hostel essentials</h2>
+      <p>Every item below shows the campus market price alongside ours, so the difference is never hidden.</p>
+    </div>
+    <div class="key-bar">
+      <div class="key-item"><span class="key-dot" style="background:var(--maroon)"></span> Campus market price</div>
+      <div class="key-item"><span class="key-dot" style="background:var(--forest)"></span> You save with us</div>
+      <div class="key-item"><span class="key-dot" style="background:var(--ink-soft)"></span> Essential — same price everywhere</div>
+    </div>
+    <nav class="cat-nav" id="catNav"></nav>
+    <div id="main"></div>
+  </div>
+</section>
+
+<section class="how-section" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The process</span>
+      <h2>How it works</h2>
+      <p>Three steps from browsing to a delivered order — no payment until step three.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-step"><div class="step-num">01</div><h3>Add what you need</h3><p>Browse the shop above and add each item to your order list — adjust quantities any time before checking out.</p></div>
+      <div class="how-step"><div class="step-num">02</div><h3>Confirm on WhatsApp</h3><p>Tap confirm and your itemised order opens in WhatsApp, ready to send straight to 0713 781 789. Still no payment at this step.</p></div>
+      <div class="how-step"><div class="step-num">03</div><h3>Pay on delivery</h3><p>We bring your order to your hall or hostel. Check everything is correct, then pay in cash or M-Pesa — only once it's in your hands.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Questions answered</span>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>Do I have to pay anything before delivery?</summary>
+        <p>No. We never ask for a deposit or upfront transfer. You confirm your order on WhatsApp, we deliver it to your hall, and you only pay — cash or M-Pesa — once you've checked it's correct.</p>
+      </details>
+      <details>
+        <summary>How is this cheaper than the campus market?</summary>
+        <p>We check our prices against what campus stalls charge for the same item and price just above cost, rather than adding a full retail markup. Essentials like noodles are priced to match exactly — we're not trying to profit on the basics.</p>
+      </details>
+      <details>
+        <summary>Do you deliver to all halls and hostels?</summary>
+        <p>Message us on WhatsApp with your hall or hostel name and we'll confirm delivery. Most halls on and around campus are covered.</p>
+      </details>
+      <details>
+        <summary>How do I pay?</summary>
+        <p>Pay on delivery — by cash or M-Pesa — once your order has arrived and you've checked it.</p>
+      </details>
+      <details>
+        <summary>What if an item is out of stock?</summary>
+        <p>We'll let you know on WhatsApp as soon as we see your order, and suggest the nearest alternative or an updated delivery time.</p>
+      </details>
+      <details>
+        <summary>Can I ask about an item that isn't listed yet, like patapata?</summary>
+        <p>Yes — tap "Ask on WhatsApp" on that item's card, or message us directly. We're adding items as we confirm fair pricing for each one.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><div class="crest">FT</div><b>Fresher's Trunk</b></div>
+        <p>Hostel essentials for University of Nairobi freshers, priced fairly and delivered to your door. Pay only on delivery. Independent, student-run — not an official University of Nairobi enterprise.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/254713781789" target="_blank">WhatsApp: 0713 781 789</a></li>
+          <li><a href="tel:+254713781789">Call: 0713 781 789</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Fresher's Trunk · Nairobi, Kenya</span>
+      <button onclick="openAdmin()">⚙ Admin</button>
+    </div>
+  </div>
+</footer>
 
 <button class="floating-cart" id="floatingCart" hidden onclick="openCart()">
   <span>View order</span>
@@ -273,60 +436,112 @@
   <span class="total mono" id="floatTotal">Ksh 0</span>
 </button>
 
-<div class="overlay" id="overlay" hidden onclick="closeIfOverlay(event)">
+<div class="overlay" id="overlay" hidden onclick="closeIfOverlay(event,'overlay',closeCart)">
   <div class="drawer">
-    <div class="drawer-head">
-      <h3>Your order</h3>
-      <button class="close-btn" onclick="closeCart()">&times;</button>
-    </div>
+    <div class="drawer-head"><h3>Your order</h3><button class="close-btn" onclick="closeCart()">&times;</button></div>
     <div id="cartLines"></div>
-    <div class="cart-total-row" id="cartTotalRow" hidden>
-      <span>Total</span>
-      <span class="val" id="cartTotalVal">Ksh 0</span>
+    <div class="cart-total-row" id="cartTotalRow" hidden><span>Total</span><span class="val" id="cartTotalVal">Ksh 0</span></div>
+
+    <div class="customer-fields" id="customerFields" hidden>
+      <div>
+        <label for="custName">Your name</label>
+        <input type="text" id="custName" placeholder="e.g. Beryl Achieng" oninput="validateCustomerFields()">
+      </div>
+      <div class="field-row">
+        <div>
+          <label for="custHall">Hall / hostel</label>
+          <input type="text" id="custHall" placeholder="e.g. Hall 9" oninput="validateCustomerFields()">
+        </div>
+        <div>
+          <label for="custRoom">Room no.</label>
+          <input type="text" id="custRoom" placeholder="e.g. 214" oninput="validateCustomerFields()">
+        </div>
+      </div>
+      <div class="field-error" id="fieldError">Please fill in your name, hall and room number so we can find you.</div>
+      <div class="cod-note"><span class="tick">✓</span><span>No payment now — you only pay cash or M-Pesa once your order is delivered and checked.</span></div>
     </div>
-    <button class="confirm-btn" id="confirmBtn" hidden onclick="confirmOrder()">Confirm booking on WhatsApp</button>
-    <div class="fine-print" id="finePrint" hidden>Sends your order to 0713 781 789 — pay when it's delivered to your hostel.</div>
+
+    <button class="confirm-btn" id="confirmBtn" hidden onclick="confirmOrder()" disabled>Confirm booking on WhatsApp</button>
+    <div class="fine-print" id="finePrint" hidden>Sends your order to 0713 781 789 — pay only when it's delivered to your hostel.</div>
   </div>
 </div>
 
-<footer>Fresher's Trunk &middot; Nairobi &middot; Prices reflect campus market rates as of July 2026 and may change.</footer>
+<div class="overlay" id="adminOverlay" hidden onclick="closeIfOverlay(event,'adminOverlay',closeAdmin)">
+  <div class="admin-drawer">
+    <div class="drawer-head"><h3>Fresher's Trunk — order log</h3><button class="close-btn" onclick="closeAdmin()">&times;</button></div>
+    <p style="font-size:12.5px; color:var(--ink-soft); margin-top:-6px;">Local mirror of orders confirmed from this device. Full order log lives in the connected Google Sheet — see sync status below.</p>
+    <div class="admin-stats">
+      <div class="admin-stat"><div class="lbl">Total orders</div><div class="val" id="adminTotalOrders">0</div></div>
+      <div class="admin-stat"><div class="lbl">Total value</div><div class="val" id="adminTotalValue">Ksh 0</div></div>
+      <div class="admin-stat"><div class="lbl">Avg. order</div><div class="val" id="adminAvgValue">Ksh 0</div></div>
+    </div>
+    <div id="adminTableWrap"></div>
+    <div class="admin-sync-note" id="syncNote">Webhook not configured — orders are only saved on this device. Set GAS_WEBHOOK_URL in the script to log every order centrally.</div>
+    <button class="admin-clear" onclick="clearOrders()">Clear local order log</button>
+  </div>
+</div>
 
 <script>
 const WHATSAPP_NUMBER = "254713781789";
+const STORAGE_KEY = "freshersTrunkOrders";
+const CART_STORAGE_KEY = "freshersTrunkCart";
+const CUSTOMER_STORAGE_KEY = "freshersTrunkCustomer";
+
+/*
+  ORDER LOGGING (central record, not just this device):
+  1. In Google Sheets, go to Extensions > Apps Script and create a doPost(e) function
+     that appends e.parameter fields (name, hall, room, items, total, date) as a new row.
+  2. Deploy it as a Web App (Execute as: Me, Who has access: Anyone), copy the /exec URL.
+  3. Paste that URL below. Until this is set, orders only save to this browser's
+     localStorage, which the admin panel mirrors — real order tracking needs this webhook.
+*/
+const GAS_WEBHOOK_URL = ""; // e.g. "https://script.google.com/macros/s/XXXXX/exec"
 
 const products = [
-  { id:"padlock", category:"Padlocks", name:"Padlock", filename:"padlock.jpg",
-    ourPrice:80, clabuLow:100, clabuHigh:100 },
-
-  { id:"book200", category:"Books", name:"Notebook — 200 pages", filename:"notebook-200.jpg",
-    ourPrice:100, clabuLow:150, clabuHigh:150 },
-  { id:"book120", category:"Books", name:"Notebook — 120 pages", filename:"notebook-120.jpg",
-    ourPrice:80, clabuLow:120, clabuHigh:120 },
-  { id:"book96", category:"Books", name:"Notebook — 96 pages", filename:"notebook-96.jpg",
-    ourPrice:70, clabuLow:85, clabuHigh:85 },
-
-  { id:"noodles", category:"Kitchen", name:"Noodles (packet)", filename:"noodles.jpg",
-    ourPrice:50, clabuLow:50, clabuHigh:50, samePrice:true,
-    note:"An essential — priced the same everywhere" },
-
-  { id:"crocs", category:"Bathroom", name:"Crocs (bathroom slippers)", filename:"crocs.jpg",
-    ourPrice:200, clabuLow:250, clabuHigh:300 },
-  { id:"patapata", category:"Bathroom", name:"Patapata (bathing slippers)", filename:"patapata.jpg",
-    comingSoon:true, note:"Price to be confirmed" },
+  { id:"padlock", category:"Padlocks", name:"Padlock", filename:"padlock.webp", ourPrice:80, clabuLow:100, clabuHigh:100 },
+  { id:"book200", category:"Books", name:"Notebook — 200 pages", filename:"200.webp", ourPrice:100, clabuLow:150, clabuHigh:150 },
+  { id:"book120", category:"Books", name:"Notebook — 120 pages", filename:"120.webp", ourPrice:80, clabuLow:120, clabuHigh:120 },
+  { id:"book96", category:"Books", name:"Notebook — 96 pages", filename:"96.webp", ourPrice:70, clabuLow:85, clabuHigh:85 },
+  { id:"noodles", category:"Kitchen", name:"Noodles (packet)", filename:"noodles.webp", ourPrice:50, clabuLow:50, clabuHigh:50, samePrice:true, note:"An essential — priced the same everywhere" },
+  { id:"crocs", category:"Bathroom", name:"Crocs (bathroom slippers)", filename:"crocs.webp", ourPrice:200, clabuLow:250, clabuHigh:300 },
+  { id:"patapata", category:"Bathroom", name:"Patapata (bathing slippers)", filename:"patapata.webp", comingSoon:true, note:"Price to be confirmed" },
 ];
 
 const categories = [...new Set(products.map(p => p.category))];
-const cart = {};
+let cart = {};
 const uploadedImages = {};
 
 function money(n){ return "Ksh " + n.toLocaleString(); }
+
+/* ---- cart persistence (survives refresh) ---- */
+function loadCart(){
+  try {
+    const raw = localStorage.getItem(CART_STORAGE_KEY);
+    if (!raw) return {};
+    const parsed = JSON.parse(raw);
+    const valid = {};
+    Object.entries(parsed).forEach(([id, qty]) => {
+      if (products.some(p => p.id === id) && qty > 0) valid[id] = qty;
+    });
+    return valid;
+  } catch(e){ return {}; }
+}
+function saveCart(){
+  try { localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart)); } catch(e){}
+}
+function loadCustomer(){
+  try { return JSON.parse(localStorage.getItem(CUSTOMER_STORAGE_KEY)) || {}; }
+  catch(e){ return {}; }
+}
+function saveCustomer(c){
+  try { localStorage.setItem(CUSTOMER_STORAGE_KEY, JSON.stringify(c)); } catch(e){}
+}
 
 function renderNav(){
   document.getElementById("catNav").innerHTML = categories.map((c,i)=>
     `<div class="cat-chip${i===0?' active':''}" onclick="scrollToCat('${c}', this)">${c}</div>`
   ).join("");
 }
-
 function scrollToCat(cat, el){
   document.querySelectorAll('.cat-chip').forEach(c=>c.classList.remove('active'));
   el.classList.add('active');
@@ -336,35 +551,24 @@ function scrollToCat(cat, el){
 function renderMain(){
   document.getElementById("main").innerHTML = categories.map(cat => {
     const items = products.filter(p=>p.category===cat);
-    return `
-      <div class="category-block" id="cat-${cat}">
-        <div class="category-head">
-          <h2>${cat}</h2>
-          <span class="count">${items.length} item${items.length>1?'s':''}</span>
-        </div>
-        <div class="grid">${items.map(renderCard).join("")}</div>
-      </div>
-    `;
+    return `<div class="category-block" id="cat-${cat}">
+      <div class="category-head"><h2>${cat}</h2><span class="count">${items.length} item${items.length>1?'s':''}</span></div>
+      <div class="grid">${items.map(renderCard).join("")}</div>
+    </div>`;
   }).join("");
 }
 
 function imageSlotHTML(p){
   const uploaded = uploadedImages[p.id];
-  return `
-    <div class="image-slot" onclick="document.getElementById('file-${p.id}').click()">
+  return `<div class="image-slot" onclick="document.getElementById('file-${p.id}').click()">
       ${uploaded
         ? `<img src="${uploaded}" alt="${p.name}">`
         : `<img src="images/${p.filename}" alt="${p.name}" onerror="this.style.display='none'">
-           <div class="placeholder" id="ph-${p.id}">
-             <div class="plus">+</div>
-             <span>images/${p.filename}</span>
-           </div>`
+           <div class="placeholder" id="ph-${p.id}"><div class="plus">+</div><span>images/${p.filename}</span></div>`
       }
-      <div class="corner tl"></div><div class="corner tr"></div>
-      <div class="corner bl"></div><div class="corner br"></div>
+      <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
       <input type="file" accept="image/*" id="file-${p.id}" onchange="handleUpload(event, '${p.id}')">
-    </div>
-  `;
+    </div>`;
 }
 
 function handleUpload(e, id){
@@ -374,12 +578,24 @@ function handleUpload(e, id){
   reader.onload = () => {
     uploadedImages[id] = reader.result;
     const slot = e.target.closest('.image-slot');
-    slot.querySelector('img') && slot.querySelector('img').remove();
-    const ph = slot.querySelector('.placeholder');
-    if (ph) ph.remove();
+    const oldImg = slot.querySelector('img'); if (oldImg) oldImg.remove();
+    const ph = slot.querySelector('.placeholder'); if (ph) ph.remove();
+    const img = document.createElement('img');
+    img.src = reader.result; img.alt = id;
+    slot.prepend(img);
+  };
+  reader.readAsDataURL(file);
+}
+
+function handleGenericUpload(e, phId){
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    const slot = e.target.closest('.image-slot');
+    const ph = document.getElementById(phId); if (ph) ph.remove();
     const img = document.createElement('img');
     img.src = reader.result;
-    img.alt = id;
     slot.prepend(img);
   };
   reader.readAsDataURL(file);
@@ -389,10 +605,7 @@ function renderCard(p){
   const priceBlock = p.comingSoon
     ? `<div class="price-tag"><div class="prices"><span class="our-price">Coming soon</span></div></div>`
     : p.samePrice
-      ? `<div class="price-tag">
-           <div class="prices"><span class="our-price">${money(p.ourPrice)}</span></div>
-           <span class="same-price-badge">Same as market</span>
-         </div>`
+      ? `<div class="price-tag"><div class="prices"><span class="our-price">${money(p.ourPrice)}</span></div><span class="same-price-badge">Same as market</span></div>`
       : `<div class="price-tag">
            <div class="prices">
              <span class="clabu-price">${p.clabuLow===p.clabuHigh ? money(p.clabuLow) : `Ksh ${p.clabuLow}\u2013${p.clabuHigh}`}</span>
@@ -405,8 +618,7 @@ function renderCard(p){
     ? `<button class="coming-soon-btn" onclick="enquire('${p.name}')">Ask on WhatsApp</button>`
     : `<div id="ctrl-${p.id}">${cart[p.id] ? qtyRowHTML(p.id) : `<button class="add-btn" onclick="addItem('${p.id}')">Add to order</button>`}</div>`;
 
-  return `
-    <div class="card${p.comingSoon ? ' soon' : ''}">
+  return `<div class="card${p.comingSoon ? ' soon' : ''}">
       ${imageSlotHTML(p)}
       <div class="card-body">
         <p class="card-name">${p.name}</p>
@@ -414,21 +626,17 @@ function renderCard(p){
         ${priceBlock}
         ${controls}
       </div>
-    </div>
-  `;
+    </div>`;
 }
 
 function qtyRowHTML(id){
-  return `<div class="qty-row">
-    <button onclick="changeQty('${id}', -1)">−</button>
-    <span>${cart[id]}</span>
-    <button onclick="changeQty('${id}', 1)">+</button>
-  </div>`;
+  return `<div class="qty-row"><button onclick="changeQty('${id}', -1)">−</button><span>${cart[id]}</span><button onclick="changeQty('${id}', 1)">+</button></div>`;
 }
 
 function addItem(id){
   cart[id] = 1;
   document.getElementById('ctrl-'+id).innerHTML = qtyRowHTML(id);
+  saveCart();
   updateFloatingCart();
 }
 
@@ -441,6 +649,7 @@ function changeQty(id, delta){
   } else {
     ctrl.innerHTML = qtyRowHTML(id);
   }
+  saveCart();
   updateFloatingCart();
   if (!document.getElementById('overlay').hidden) renderCartDrawer();
 }
@@ -461,56 +670,139 @@ function updateFloatingCart(){
     fc.hidden = false;
     document.getElementById('floatCount').textContent = count;
     document.getElementById('floatTotal').textContent = money(cartTotal());
-  } else {
-    fc.hidden = true;
-  }
+  } else { fc.hidden = true; }
 }
 
 function openCart(){ document.getElementById('overlay').hidden = false; renderCartDrawer(); }
 function closeCart(){ document.getElementById('overlay').hidden = true; }
-function closeIfOverlay(e){ if(e.target.id === 'overlay') closeCart(); }
+function closeIfOverlay(e, id, closeFn){ if(e.target.id === id) closeFn(); }
 
 function renderCartDrawer(){
   const lines = document.getElementById('cartLines');
   const ids = Object.keys(cart);
+  const customerFields = document.getElementById('customerFields');
+  const confirmBtn = document.getElementById('confirmBtn');
+  const finePrint = document.getElementById('finePrint');
+
   if (ids.length === 0){
     lines.innerHTML = `<div class="cart-empty">Your order list is empty. Add a padlock, a notebook, some noodles — whatever you need for hostel.</div>`;
     document.getElementById('cartTotalRow').hidden = true;
-    document.getElementById('confirmBtn').hidden = true;
-    document.getElementById('finePrint').hidden = true;
+    customerFields.hidden = true;
+    confirmBtn.hidden = true;
+    finePrint.hidden = true;
     return;
   }
   lines.innerHTML = ids.map(id=>{
     const p = products.find(x=>x.id===id);
     const qty = cart[id];
-    return `
-      <div class="cart-line">
+    return `<div class="cart-line">
         <span class="name">${p.name}</span>
-        <div class="mini-qty">
-          <button onclick="changeQty('${id}', -1)">−</button>
-          <span>${qty}</span>
-          <button onclick="changeQty('${id}', 1)">+</button>
-        </div>
+        <div class="mini-qty"><button onclick="changeQty('${id}', -1)">−</button><span>${qty}</span><button onclick="changeQty('${id}', 1)">+</button></div>
         <span class="line-price">${money(p.ourPrice*qty)}</span>
-      </div>
-    `;
+      </div>`;
   }).join("");
   document.getElementById('cartTotalRow').hidden = false;
   document.getElementById('cartTotalVal').textContent = money(cartTotal());
-  document.getElementById('confirmBtn').hidden = false;
-  document.getElementById('finePrint').hidden = false;
+
+  customerFields.hidden = false;
+  const saved = loadCustomer();
+  const nameEl = document.getElementById('custName');
+  const hallEl = document.getElementById('custHall');
+  const roomEl = document.getElementById('custRoom');
+  if (!nameEl.value) nameEl.value = saved.name || "";
+  if (!hallEl.value) hallEl.value = saved.hall || "";
+  if (!roomEl.value) roomEl.value = saved.room || "";
+
+  confirmBtn.hidden = false;
+  finePrint.hidden = false;
+  validateCustomerFields();
 }
 
-function confirmOrder(){
+function validateCustomerFields(){
+  const name = document.getElementById('custName').value.trim();
+  const hall = document.getElementById('custHall').value.trim();
+  const room = document.getElementById('custRoom').value.trim();
+  const ok = name.length > 1 && hall.length > 0 && room.length > 0;
+  const confirmBtn = document.getElementById('confirmBtn');
+  const errorEl = document.getElementById('fieldError');
+  if (confirmBtn) confirmBtn.disabled = !ok;
+  if (errorEl) errorEl.classList.remove('show');
+  return ok;
+}
+
+function loadOrders(){
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; }
+  catch(e){ return []; }
+}
+function saveOrders(orders){
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(orders)); } catch(e){}
+}
+function logOrderLocally(entry){
+  const orders = loadOrders();
+  orders.unshift(entry);
+  saveOrders(orders);
+}
+
+/* Sends the order to the central Google Sheet webhook, if configured.
+   Falls back silently to local-only logging if no URL is set or the request fails —
+   the WhatsApp message still goes out either way, so an order is never blocked. */
+async function logOrderToSheet(entry){
+  if (!GAS_WEBHOOK_URL) return { synced:false, reason:"not_configured" };
+  try {
+    await fetch(GAS_WEBHOOK_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(entry)
+    });
+    return { synced:true };
+  } catch(err){
+    return { synced:false, reason:"request_failed" };
+  }
+}
+
+async function confirmOrder(){
   const ids = Object.keys(cart);
   if (ids.length === 0) return;
-  let msg = "Hi Fresher's Trunk! I'd like to order:\n";
-  ids.forEach(id=>{
+  if (!validateCustomerFields()){
+    document.getElementById('fieldError').classList.add('show');
+    return;
+  }
+
+  const name = document.getElementById('custName').value.trim();
+  const hall = document.getElementById('custHall').value.trim();
+  const room = document.getElementById('custRoom').value.trim();
+  saveCustomer({ name, hall, room });
+
+  const itemLines = ids.map(id=>{
     const p = products.find(x=>x.id===id);
-    const qty = cart[id];
-    msg += `• ${p.name} x${qty} — ${money(p.ourPrice*qty)}\n`;
+    return { name: p.name, qty: cart[id], lineTotal: p.ourPrice*cart[id] };
   });
-  msg += `\nTotal: ${money(cartTotal())}\nI'll pay on delivery to my hostel.`;
+  const total = cartTotal();
+
+  let msg = `Hi Fresher's Trunk! I'd like to order:\n`;
+  itemLines.forEach(l => { msg += `• ${l.name} x${l.qty} — ${money(l.lineTotal)}\n`; });
+  msg += `\nTotal: ${money(total)}`;
+  msg += `\n\nName: ${name}\nHall/Hostel: ${hall}\nRoom: ${room}`;
+  msg += `\n\nI'll pay on delivery to my hostel.`;
+
+  const entry = {
+    date: new Date().toISOString(),
+    name, hall, room,
+    items: itemLines,
+    total
+  };
+
+  logOrderLocally(entry);
+  logOrderToSheet(entry); // best-effort central log; doesn't block WhatsApp send
+
+  // clear cart after a confirmed order, keep name/hall/room for next time
+  cart = {};
+  saveCart();
+  updateFloatingCart();
+  renderMain();
+  renderCartDrawer();
+
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
@@ -519,8 +811,59 @@ function enquire(name){
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
+/* ---- admin ---- */
+function openAdmin(){
+  const pass = prompt("Admin password:");
+  if (pass !== "trunk2026") { if (pass !== null) alert("Incorrect password."); return; }
+  document.getElementById('adminOverlay').hidden = false;
+  renderAdmin();
+}
+function closeAdmin(){ document.getElementById('adminOverlay').hidden = true; }
+
+function renderAdmin(){
+  const orders = loadOrders();
+  const totalValue = orders.reduce((s,o)=>s+o.total,0);
+  document.getElementById('adminTotalOrders').textContent = orders.length;
+  document.getElementById('adminTotalValue').textContent = money(totalValue);
+  document.getElementById('adminAvgValue').textContent = money(orders.length ? Math.round(totalValue/orders.length) : 0);
+
+  const wrap = document.getElementById('adminTableWrap');
+  if (orders.length === 0){
+    wrap.innerHTML = `<div class="admin-empty">No orders logged yet on this device. Orders appear here once a customer confirms via WhatsApp from this browser.</div>`;
+  } else {
+    const rows = orders.map(o=>{
+      const d = new Date(o.date);
+      const dateStr = d.toLocaleDateString('en-GB', { day:'2-digit', month:'short', year:'numeric' });
+      const itemsStr = o.items.map(i=>`${i.name} x${i.qty}`).join(", ");
+      const who = [o.name, o.hall, o.room].filter(Boolean).join(" · ");
+      return `<tr><td>${dateStr}</td><td>${who || "—"}</td><td>${itemsStr}</td><td>${money(o.total)}</td></tr>`;
+    }).join("");
+    wrap.innerHTML = `<table class="admin-table">
+        <thead><tr><th>Date</th><th>Customer</th><th>Items</th><th>Total</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+  }
+
+  const syncNote = document.getElementById('syncNote');
+  if (GAS_WEBHOOK_URL){
+    syncNote.textContent = "Central logging is active — every confirmed order is also sent to the connected Google Sheet.";
+    syncNote.className = "admin-sync-note ok";
+  } else {
+    syncNote.textContent = "Webhook not configured — orders are only saved on this device. Set GAS_WEBHOOK_URL in the script to log every order centrally, from every customer's phone.";
+    syncNote.className = "admin-sync-note warn";
+  }
+}
+function clearOrders(){
+  if (!confirm("Clear all logged orders on this device? This cannot be undone.")) return;
+  saveOrders([]);
+  renderAdmin();
+}
+
+/* ---- init ---- */
+cart = loadCart();
 renderNav();
 renderMain();
+updateFloatingCart();
 </script>
 
 </body>
