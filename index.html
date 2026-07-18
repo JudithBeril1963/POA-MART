@@ -340,10 +340,7 @@
 <section class="about-section" id="about">
   <div class="wrap about-grid">
     <div class="image-slot" onclick="document.getElementById('file-about').click()">
-      <div class="placeholder" id="ph-about">
-        <div class="plus">+</div>
-        <span>images/about.jpg — team or stock photo</span>
-      </div>
+      <img src="images/hero-essentials.jpg" alt="Nafuu essentials — bucket, lamp, books, padlock, basin, slippers">
       <input type="file" accept="image/*" id="file-about" onchange="handleGenericUpload(event,'ph-about')">
     </div>
     <div>
@@ -548,11 +545,11 @@ const CUSTOMER_STORAGE_KEY = "freshersTrunkCustomer";
 const GAS_WEBHOOK_URL = ""; // e.g. "https://script.google.com/macros/s/XXXXX/exec"
 
 const products = [
-  { id:"padlock", category:"Padlocks", name:"Padlock", filename:"padlock.webp", ourPrice:80, clabuLow:100, clabuHigh:100 },
+  { id:"padlock", category:"Padlocks", name:"Padlock", filename:"PADLOCK.webp", ourPrice:80, clabuLow:100, clabuHigh:100 },
   { id:"book200", category:"Books", name:"Notebook — 200 pages", filename:"200.webp", ourPrice:100, clabuLow:150, clabuHigh:150 },
   { id:"book120", category:"Books", name:"Notebook — 120 pages", filename:"120.webp", ourPrice:80, clabuLow:120, clabuHigh:120 },
   { id:"book96", category:"Books", name:"Notebook — 96 pages", filename:"96.webp", ourPrice:70, clabuLow:85, clabuHigh:85 },
-  { id:"noodles", category:"Kitchen", name:"Noodles (packet)", filename:"noodles.webp", ourPrice:50, clabuLow:50, clabuHigh:50, samePrice:true, note:"An essential — priced the same everywhere" },
+  { id:"noodles", category:"Kitchen", name:"Noodles (packet)", filename:"NOODLES.webp", ourPrice:50, clabuLow:50, clabuHigh:50, samePrice:true, note:"An essential — priced the same everywhere" },
   { id:"crocs", category:"Bathroom", name:"Crocs (bathroom slippers)", filename:"product-slippers.jpg", ourPrice:200, clabuLow:250, clabuHigh:300 },
   { id:"bucket", category:"Bathroom", name:"Bucket (with lid)", filename:"product-bucket.jpg", comingSoon:true, note:"Price to be confirmed" },
   { id:"patapata", category:"Bathroom", name:"Patapata (bathing slippers)", filename:"patapata.webp", comingSoon:true, note:"Price to be confirmed" },
