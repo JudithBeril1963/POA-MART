@@ -3,306 +3,338 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fresher's Trunk | Hostel Essentials for University of Nairobi Freshers</title>
+<title>Nafuu | Hostel Essentials for University of Nairobi Freshers</title>
 <meta name="description" content="Padlocks, notebooks, noodles and bathroom essentials for University of Nairobi hostel freshers — fairer prices than the campus market, pay on delivery.">
 
-<!-- Open Graph / link preview tags -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Fresher's Trunk | Hostel Essentials for UoN Freshers">
+<meta property="og:title" content="Nafuu | Hostel Essentials for UoN Freshers">
 <meta property="og:description" content="Padlocks, notebooks, noodles and bathroom essentials — fairer prices than the campus market. Order on WhatsApp, pay on delivery.">
 <meta property="og:image" content="images/og-cover.jpg">
-<meta property="og:url" content="https://freshers-trunk.example/">
+<meta property="og:url" content="https://nafuu.example/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Fresher's Trunk | Hostel Essentials for UoN Freshers">
+<meta name="twitter:title" content="Nafuu | Hostel Essentials for UoN Freshers">
 <meta name="twitter:description" content="Padlocks, notebooks, noodles and bathroom essentials — fairer prices than the campus market. Pay on delivery.">
 <meta name="twitter:image" content="images/og-cover.jpg">
 
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#0A2158; --navy-2:#123170; --gold:#A8203A; --gold-light:#F2D5D9;
-    --paper:#FFFFFF; --paper-2:#F1F4F9; --line:#D9DEE6;
-    --ink:#1B2430; --ink-soft:#5B6472; --maroon:#8C2F2F; --forest:#1F7A45;
+    --cream:#F6ECD3; --cream-deep:#EFE0BC; --white:#FFFFFF;
+    --navy:#16213F; --navy-deep:#0E1730;
+    --orange:#C96A3A; --yellow:#F2B705; --green:#1E8E5A;
+    --ink:#16213F; --ink-soft:#6B6B76; --line:#E3D6AE;
   }
   *{box-sizing:border-box;}
   html{ scroll-behavior:smooth; }
-  body{ margin:0; background:var(--paper); color:var(--ink); font-family:"Inter",system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
-  h1,h2,h3,.serif{ font-family:"Fraunces",serif; letter-spacing:-0.01em; }
+  body{ margin:0; background:var(--cream); color:var(--ink); font-family:"Inter",system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,.display{ font-family:"Space Grotesk",sans-serif; letter-spacing:-0.02em; }
   .mono{ font-family:"IBM Plex Mono",monospace; }
-  .eyebrow{ font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); }
-  section{ scroll-margin-top:70px; }
+  .eyebrow{ font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-soft); }
+  section{ scroll-margin-top:74px; }
   .wrap{ max-width:1080px; margin:0 auto; padding:0 24px; }
-
-  /* ============ urgency banner ============ */
-  .urgency-banner{ background:var(--gold); color:#fff; text-align:center; padding:9px 16px; font-size:12.5px; font-weight:600; font-family:"IBM Plex Mono",monospace; letter-spacing:0.02em; }
+  @media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important; } }
 
   /* ============ sticky nav ============ */
-  .topnav{ position:sticky; top:0; z-index:60; background:var(--navy); border-bottom:1px solid rgba(255,255,255,0.12); }
-  .topnav-inner{ max-width:1080px; margin:0 auto; padding:12px 24px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
-  .topnav-brand{ display:flex; align-items:center; gap:10px; color:var(--paper); flex:0 0 auto; }
-  .crest{ width:32px; height:32px; border:1.5px solid var(--gold); display:flex; align-items:center; justify-content:center; font-family:"Fraunces",serif; font-weight:600; font-size:12.5px; color:var(--gold); border-radius:2px; }
-  .topnav-brand b{ font-size:14.5px; font-weight:600; }
-  .topnav-links{ display:flex; gap:20px; overflow-x:auto; scrollbar-width:none; }
-  .topnav-links::-webkit-scrollbar{ display:none; }
-  .topnav-links a{ color:#C7D0DA; text-decoration:none; font-size:13.5px; white-space:nowrap; }
-  .topnav-links a:hover{ color:var(--gold-light); }
-  .topnav-cart{ background:transparent; border:1px solid var(--gold); color:var(--paper); border-radius:3px; padding:8px 14px; font-size:13px; font-weight:500; cursor:pointer; display:flex; align-items:center; gap:8px; flex:0 0 auto; }
-  .topnav-cart .n{ font-family:"IBM Plex Mono",monospace; color:var(--gold); }
+  .topnav{ position:sticky; top:0; z-index:60; background:var(--white); border-bottom:1px solid var(--line); }
+  .topnav-inner{ max-width:1080px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+  .topnav-brand{ display:flex; align-items:center; gap:10px; color:var(--navy); flex:0 0 auto; }
+  .crest{ width:34px; height:34px; border-radius:50%; background:var(--navy); display:flex; align-items:center; justify-content:center; }
+  .crest .dot{ width:10px; height:10px; border-radius:50%; background:var(--yellow); }
+  .topnav-brand b{ font-size:16px; font-weight:700; font-family:"Space Grotesk",sans-serif; letter-spacing:0.01em; }
+  .topnav-links{ display:flex; gap:20px; }
+  .topnav-links a{ color:var(--ink-soft); text-decoration:none; font-size:13.5px; white-space:nowrap; font-weight:500; }
+  .topnav-links a:hover{ color:var(--navy); }
+  .nav-actions{ display:flex; align-items:center; gap:10px; }
+  .icon-btn{ width:38px; height:38px; border-radius:50%; border:1px solid var(--line); background:var(--white); display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--navy); flex:0 0 auto; }
+  .topnav-cart{ background:var(--navy); border:none; color:var(--white); border-radius:999px; padding:9px 16px 9px 14px; font-size:13px; font-weight:600; cursor:pointer; display:flex; align-items:center; gap:8px; flex:0 0 auto; }
+  .topnav-cart .n{ font-family:"IBM Plex Mono",monospace; color:var(--navy); background:var(--yellow); border-radius:999px; padding:1px 7px; font-size:11.5px; }
+  @media (max-width:820px){ .topnav-links{ display:none; } }
 
   /* ============ hero ============ */
-  .hero{ background:var(--navy); color:var(--paper); border-bottom:4px solid var(--gold); }
-  .hero-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:44px; align-items:center; padding:52px 0 48px; }
-  .hero-copy h1{ font-size:clamp(30px,4vw,46px); line-height:1.08; margin:14px 0 16px; font-weight:500; }
-  .hero-copy h1 em{ font-style:normal; color:var(--gold); }
-  .hero-copy p{ font-size:15.5px; line-height:1.65; color:#D6DCE4; max-width:480px; margin:0 0 22px; }
-  .hero-ctas{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:22px; }
-  .btn-gold{ background:var(--gold); color:var(--navy); border:none; padding:13px 22px; font-weight:600; font-size:14px; cursor:pointer; text-decoration:none; display:inline-block; }
-  .btn-ghost{ background:transparent; border:1px solid var(--gold); color:var(--paper); padding:13px 22px; font-weight:500; font-size:14px; cursor:pointer; text-decoration:none; display:inline-block; }
-  .contact-strip{ display:flex; gap:22px; flex-wrap:wrap; font-size:13px; color:#C7D0DA; border-top:1px solid rgba(255,255,255,0.15); padding-top:16px; }
-  .contact-strip b{ color:var(--gold-light); font-family:"IBM Plex Mono",monospace; font-weight:600; }
+  .hero{ background:var(--cream); }
+  .hero-inner{ padding:52px 0 30px; max-width:760px; }
+  .hero-badge{ display:inline-flex; align-items:center; gap:8px; background:var(--navy); color:var(--cream); border-radius:999px; padding:7px 16px; font-size:11.5px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; font-family:"IBM Plex Mono",monospace; margin-bottom:20px; }
+  .hero-badge .dot{ width:7px; height:7px; border-radius:50%; background:var(--green); }
+  .hero h1{ font-size:clamp(32px,5vw,54px); line-height:1.05; margin:0 0 18px; font-weight:700; color:var(--navy); }
+  .hero h1 em{ font-style:normal; color:var(--orange); }
+  .hero p{ font-size:15.5px; line-height:1.65; color:var(--ink-soft); max-width:480px; margin:0 0 26px; }
+  .hero-ctas{ display:flex; gap:12px; flex-wrap:wrap; }
+  .btn-solid{ background:var(--navy); color:var(--white); border:none; padding:15px 26px; font-weight:600; font-size:14px; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:8px; border-radius:999px; }
+  .btn-solid:hover{ background:var(--navy-deep); }
+  .btn-outline{ background:var(--white); border:1.5px solid var(--line); color:var(--navy); padding:14px 26px; font-weight:600; font-size:14px; cursor:pointer; text-decoration:none; display:inline-block; border-radius:999px; }
+  .btn-outline:hover{ border-color:var(--navy); }
 
-  .hero-image .image-slot{ aspect-ratio:4/3.2; }
+  /* ============ hero image with floating sticker ============ */
+  .hero-photo{ position:relative; background:var(--cream-deep); }
+  .hero-photo .image-slot{ aspect-ratio:16/8; border:none; border-radius:0; }
+  @media (max-width:820px){ .hero-photo .image-slot{ aspect-ratio:4/4.5; } }
+  .sticker{ position:absolute; right:28px; bottom:-26px; background:var(--yellow); color:var(--navy); border-radius:50%; width:130px; height:130px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:10px; box-shadow:0 10px 24px rgba(22,33,63,0.25); transform:rotate(-6deg); z-index:3; font-family:"Space Grotesk",sans-serif; }
+  .sticker b{ font-size:14px; font-weight:700; line-height:1.15; }
+  .sticker span{ font-size:10.5px; font-weight:500; margin-top:3px; line-height:1.2; }
+  @media (max-width:820px){ .sticker{ width:104px; height:104px; right:16px; bottom:-20px; } .sticker b{ font-size:12px; } .sticker span{ font-size:9.5px; } }
 
-  /* ============ trust ribbon under hero copy ============ */
-  .trust-ribbon{ display:flex; gap:16px; flex-wrap:wrap; margin:0 0 20px; }
-  .trust-pill{ display:flex; align-items:center; gap:7px; background:rgba(255,255,255,0.08); border:1px solid rgba(239,223,184,0.35); padding:7px 12px; font-size:12px; color:var(--gold-light); }
-  .trust-pill .dot{ width:6px; height:6px; border-radius:50%; background:var(--gold); flex:0 0 auto; }
+  /* ============ feature strip (floats over the photo) ============ */
+  .feature-strip-wrap{ position:relative; z-index:2; }
+  .feature-strip{ background:var(--white); border-radius:20px; box-shadow:0 14px 34px rgba(22,33,63,0.14); margin:-34px auto 0; max-width:1032px; padding:22px 20px; display:grid; grid-template-columns:repeat(3,1fr); gap:12px; position:relative; }
+  .feature-item{ display:flex; flex-direction:column; align-items:center; gap:8px; text-align:center; padding:6px 8px; }
+  .feature-item svg{ width:26px; height:26px; stroke:var(--orange); }
+  .feature-item span{ font-size:12.5px; font-weight:700; color:var(--navy); letter-spacing:0.01em; }
+  @media (max-width:820px){ .feature-strip{ grid-template-columns:1fr; gap:16px; margin-top:-24px; } }
+
+  /* ============ ticker ============ */
+  .ticker-wrap{ background:var(--navy); overflow:hidden; padding:13px 0; margin-top:26px; }
+  .ticker-track{ display:flex; gap:0; width:max-content; animation:ticker 26s linear infinite; }
+  .ticker-track span{ display:inline-flex; align-items:center; gap:14px; color:var(--cream); font-family:"Space Grotesk",sans-serif; font-weight:600; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:0 22px; white-space:nowrap; }
+  .ticker-track .star{ color:var(--yellow); }
+  @keyframes ticker{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+
+  /* ============ campus banner ============ */
+  .campus-banner{ background:var(--white); padding:0; border-bottom:1px solid var(--line); }
+  .campus-banner .image-slot{ aspect-ratio:16/6; border-radius:0; border:none; }
+  .campus-caption-wrap{ position:relative; }
+  .campus-caption{ position:absolute; left:24px; bottom:18px; background:var(--white); border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:600; color:var(--navy); box-shadow:0 6px 16px rgba(22,33,63,0.16); display:flex; align-items:center; gap:8px; z-index:2; }
+  .campus-caption .dot{ width:7px; height:7px; border-radius:50%; background:var(--orange); }
+  @media (max-width:820px){ .campus-banner .image-slot{ aspect-ratio:4/5; } }
 
   /* ============ image slot (reused everywhere) ============ */
-  .image-slot{ width:100%; position:relative; background:var(--paper-2); border:1px solid var(--line); cursor:pointer; overflow:hidden; }
+  .image-slot{ width:100%; position:relative; background:var(--cream-deep); border:1px solid var(--line); cursor:pointer; overflow:hidden; }
   .image-slot img{ width:100%; height:100%; object-fit:cover; display:block; }
-  .image-slot .placeholder{ position:absolute; inset:8px; border:1.5px dashed #B7C0CC; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; color:#7C8797; text-align:center; padding:10px; }
-  .image-slot .placeholder .plus{ width:26px; height:26px; border:1.5px solid #7C8797; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:16px; line-height:1; }
+  .image-slot .placeholder{ position:absolute; inset:8px; border:1.5px dashed #C9B87C; border-radius:14px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; color:#8A7A46; text-align:center; padding:10px; }
+  .image-slot .placeholder .plus{ width:26px; height:26px; border:1.5px solid #8A7A46; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:16px; line-height:1; }
   .image-slot .placeholder span{ font-size:11px; font-family:"IBM Plex Mono",monospace; letter-spacing:0.02em; }
   .image-slot input[type=file]{ display:none; }
-  .image-slot .corner{ position:absolute; width:10px; height:10px; }
-  .image-slot .corner.tl{ top:6px; left:6px; border-top:1.5px solid var(--gold); border-left:1.5px solid var(--gold); }
-  .image-slot .corner.tr{ top:6px; right:6px; border-top:1.5px solid var(--gold); border-right:1.5px solid var(--gold); }
-  .image-slot .corner.bl{ bottom:6px; left:6px; border-bottom:1.5px solid var(--gold); border-left:1.5px solid var(--gold); }
-  .image-slot .corner.br{ bottom:6px; right:6px; border-bottom:1.5px solid var(--gold); border-right:1.5px solid var(--gold); }
-  /* hero placeholder sits on dark bg */
-  .hero-image .placeholder{ border-color:rgba(239,223,184,0.5); color:var(--gold-light); }
-  .hero-image .placeholder .plus{ border-color:var(--gold-light); }
-
-  /* ============ trust strip ============ */
-  .trust-strip{ background:var(--paper-2); border-bottom:1px solid var(--line); }
-  .trust-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; }
-  .trust-item{ padding:20px 18px; border-left:1px solid var(--line); text-align:center; }
-  .trust-item:first-child{ border-left:none; }
-  .trust-item .num{ font-family:"Fraunces",serif; font-size:20px; font-weight:600; color:var(--navy); }
-  .trust-item .lbl{ font-size:12px; color:var(--ink-soft); margin-top:4px; }
-
-  /* ============ social proof strip ============ */
-  .proof-strip{ padding:14px 0; text-align:center; background:#fff; border-bottom:1px solid var(--line); }
-  .proof-strip p{ margin:0; font-size:13px; color:var(--ink-soft); }
-  .proof-strip b{ color:var(--navy); }
 
   /* ============ generic section head ============ */
   .section-head{ max-width:620px; margin:0 auto 34px; text-align:center; }
   .section-head .eyebrow{ display:block; margin-bottom:10px; }
-  .section-head h2{ font-size:clamp(24px,3.2vw,32px); margin:0 0 10px; font-weight:600; }
+  .section-head h2{ font-size:clamp(24px,3.2vw,32px); margin:0 0 10px; font-weight:700; color:var(--navy); }
   .section-head p{ color:var(--ink-soft); font-size:14.5px; line-height:1.6; margin:0; }
 
   /* ============ about ============ */
-  .about-section{ padding:64px 0; border-bottom:1px solid var(--line); }
+  .about-section{ padding:60px 0 64px; border-bottom:1px solid var(--line); background:var(--cream); }
   .about-grid{ display:grid; grid-template-columns:0.85fr 1.15fr; gap:44px; align-items:start; }
-  .about-grid .image-slot{ aspect-ratio:1/1; }
+  .about-grid .image-slot{ aspect-ratio:1/1; border-radius:20px; }
   .about-points{ list-style:none; margin:20px 0 0; padding:0; display:grid; gap:12px; }
   .about-points li{ display:flex; gap:10px; font-size:14px; line-height:1.5; color:var(--ink); }
-  .about-points li::before{ content:"✦"; color:var(--gold); flex:0 0 auto; }
+  .about-points li::before{ content:"—"; color:var(--orange); font-weight:700; flex:0 0 auto; }
 
   /* ============ key + nav for shop ============ */
   .key-bar{ padding:20px 0 4px; display:flex; gap:26px; flex-wrap:wrap; font-size:13px; color:var(--ink-soft); }
   .key-item{ display:flex; align-items:center; gap:8px; }
-  .key-dot{ width:10px; height:10px; border-radius:2px; }
+  .key-dot{ width:9px; height:9px; border-radius:50%; }
   .cat-nav{ padding:16px 0 6px; display:flex; gap:10px; overflow-x:auto; scrollbar-width:none; }
   .cat-nav::-webkit-scrollbar{ display:none; }
-  .cat-chip{ flex:0 0 auto; padding:9px 16px; border:1px solid var(--line); font-size:13px; font-weight:500; color:var(--ink-soft); cursor:pointer; white-space:nowrap; background:#fff; }
-  .cat-chip.active{ background:var(--navy); color:var(--paper); border-color:var(--navy); }
+  .cat-chip{ flex:0 0 auto; padding:9px 18px; border:1.5px solid var(--line); border-radius:999px; font-size:13px; font-weight:600; color:var(--ink-soft); cursor:pointer; white-space:nowrap; background:var(--white); }
+  .cat-chip.active{ background:var(--navy); color:var(--cream); border-color:var(--navy); }
 
-  .shop-section{ padding:20px 0 68px; border-bottom:1px solid var(--line); }
+  .shop-section{ padding:20px 0 68px; border-bottom:1px solid var(--line); background:var(--white); }
   .category-block{ margin-top:38px; }
   .category-head{ display:flex; align-items:baseline; gap:14px; border-bottom:2px solid var(--navy); padding-bottom:10px; margin-bottom:20px; }
-  .category-head h2{ font-size:22px; margin:0; font-weight:600; }
+  .category-head h2{ font-size:21px; margin:0; font-weight:700; color:var(--navy); }
   .category-head .count{ font-size:12px; color:var(--ink-soft); font-family:"IBM Plex Mono",monospace; }
-  .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:20px; }
-  .card{ background:#fff; border:1px solid var(--line); display:flex; flex-direction:column; position:relative; }
+  .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:18px; }
+  .card{ background:var(--white); border:1px solid var(--line); border-radius:18px; display:flex; flex-direction:column; position:relative; overflow:hidden; transition:transform 0.15s ease, box-shadow 0.15s ease; }
+  .card:hover{ transform:translateY(-2px); box-shadow:0 10px 24px rgba(22,33,63,0.1); }
   .card.soon{ opacity:0.92; }
-  .card .image-slot{ aspect-ratio:4/3; border-bottom:1px solid var(--line); border-left:none; border-right:none; border-top:none; }
+  .card .image-slot{ aspect-ratio:4/3; border:none; }
+  .discount-corner{ position:absolute; top:12px; right:12px; background:var(--green); color:#fff; font-size:11px; font-weight:700; padding:5px 10px; border-radius:999px; font-family:"IBM Plex Mono",monospace; z-index:2; }
+  .same-corner{ position:absolute; top:12px; right:12px; background:var(--white); color:var(--ink-soft); font-size:10.5px; font-weight:600; padding:5px 10px; border-radius:999px; z-index:2; box-shadow:0 3px 8px rgba(22,33,63,0.12); }
+  .soon-corner{ position:absolute; top:12px; right:12px; background:var(--ink-soft); color:#fff; font-size:10.5px; font-weight:600; padding:5px 10px; border-radius:999px; z-index:2; }
   .card-body{ padding:16px; display:flex; flex-direction:column; gap:10px; flex:1; }
-  .card-name{ font-weight:600; font-size:15.5px; margin:0; font-family:"Fraunces",serif; }
+  .card-name{ font-weight:600; font-size:15.5px; margin:0; font-family:"Space Grotesk",sans-serif; color:var(--navy); }
   .card-note{ font-size:12px; color:var(--ink-soft); margin-top:-6px; }
-  .price-tag{ border:1px solid var(--line); border-left:3px solid var(--navy); padding:10px 12px; display:flex; align-items:center; justify-content:space-between; gap:8px; }
-  .price-tag .prices{ display:flex; flex-direction:column; }
-  .clabu-price{ font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--maroon); text-decoration:line-through; text-decoration-thickness:1.5px; }
+  .price-row{ display:flex; align-items:flex-end; justify-content:space-between; gap:8px; }
+  .price-row .prices{ display:flex; flex-direction:column; gap:2px; }
+  .clabu-price{ font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--ink-soft); text-decoration:line-through; text-decoration-thickness:1.5px; }
   .our-price{ font-family:"IBM Plex Mono",monospace; font-size:19px; font-weight:600; color:var(--navy); }
-  .save-badge{ background:var(--forest); color:#fff; font-size:10.5px; font-weight:600; padding:4px 9px; white-space:nowrap; font-family:"IBM Plex Mono",monospace; }
-  .same-price-badge{ background:var(--ink-soft); color:var(--paper); font-size:10.5px; font-weight:500; padding:4px 9px; white-space:nowrap; }
-  .add-btn{ background:var(--navy); color:var(--paper); border:none; padding:11px; font-weight:500; font-size:13.5px; cursor:pointer; font-family:"Inter",sans-serif; }
-  .qty-row{ display:flex; align-items:center; justify-content:space-between; background:var(--navy); padding:7px 10px; }
-  .qty-row button{ background:var(--gold); color:var(--navy); border:none; width:26px;height:26px; font-weight:700; font-size:15px; cursor:pointer; }
-  .qty-row span{ color:var(--paper); font-family:"IBM Plex Mono",monospace; font-weight:600; }
-  .coming-soon-btn{ background:transparent; border:1px solid var(--navy); color:var(--navy); padding:11px; font-weight:500; font-size:13px; cursor:pointer; font-family:"Inter",sans-serif; }
+  .save-line{ font-family:"IBM Plex Mono",monospace; font-size:11px; font-weight:700; color:var(--green); text-transform:uppercase; letter-spacing:0.02em; text-align:right; }
+  .add-btn{ background:var(--navy); color:var(--white); border:none; padding:12px; font-weight:600; font-size:13.5px; cursor:pointer; font-family:"Inter",sans-serif; border-radius:999px; display:flex; align-items:center; justify-content:center; gap:6px; }
+  .add-btn:hover{ background:var(--navy-deep); }
+  .qty-row{ display:flex; align-items:center; justify-content:space-between; background:var(--navy); padding:6px 10px; border-radius:999px; }
+  .qty-row button{ background:var(--yellow); color:var(--navy); border:none; width:24px;height:24px; border-radius:50%; font-weight:700; font-size:14px; cursor:pointer; }
+  .qty-row span{ color:var(--white); font-family:"IBM Plex Mono",monospace; font-weight:600; }
+  .coming-soon-btn{ background:transparent; border:1.5px solid var(--line); color:var(--ink-soft); padding:10px; font-weight:600; font-size:13px; cursor:pointer; font-family:"Inter",sans-serif; border-radius:999px; }
+  .coming-soon-btn:hover{ border-color:var(--navy); color:var(--navy); }
 
   /* ============ how it works ============ */
-  .how-section{ padding:64px 0; border-bottom:1px solid var(--line); background:var(--paper-2); }
-  .how-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-  .how-step{ background:#fff; border:1px solid var(--line); padding:26px 22px; position:relative; }
-  .how-step .step-num{ font-family:"Fraunces",serif; font-size:34px; font-weight:600; color:var(--gold); line-height:1; margin-bottom:12px; }
-  .how-step h3{ font-size:16.5px; margin:0 0 8px; font-weight:600; }
+  .how-section{ padding:60px 0; border-bottom:1px solid var(--line); background:var(--cream); }
+  .how-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .how-step{ background:var(--white); border:1px solid var(--line); border-radius:18px; padding:26px 22px; }
+  .how-step .step-num{ font-family:"Space Grotesk",sans-serif; font-size:26px; font-weight:700; color:var(--orange); line-height:1; margin-bottom:12px; }
+  .how-step h3{ font-size:16px; margin:0 0 8px; font-weight:700; color:var(--navy); }
   .how-step p{ font-size:13.5px; color:var(--ink-soft); line-height:1.55; margin:0; }
 
   /* ============ FAQ ============ */
-  .faq-section{ padding:64px 0; border-bottom:1px solid var(--line); }
+  .faq-section{ padding:60px 0; border-bottom:1px solid var(--line); background:var(--white); }
   .faq-list{ max-width:720px; margin:0 auto; }
   .faq-list details{ border-bottom:1px solid var(--line); padding:16px 0; }
-  .faq-list summary{ cursor:pointer; font-weight:600; font-size:14.5px; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+  .faq-list summary{ cursor:pointer; font-weight:600; font-size:14.5px; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:12px; color:var(--navy); }
   .faq-list summary::-webkit-details-marker{ display:none; }
-  .faq-list summary::after{ content:"+"; font-family:"IBM Plex Mono",monospace; font-size:18px; color:var(--gold); flex:0 0 auto; }
+  .faq-list summary::after{ content:"+"; font-family:"IBM Plex Mono",monospace; font-size:18px; color:var(--orange); flex:0 0 auto; }
   .faq-list details[open] summary::after{ content:"−"; }
   .faq-list p{ font-size:13.5px; color:var(--ink-soft); line-height:1.6; margin:10px 0 0; }
 
   /* ============ footer ============ */
-  footer{ background:var(--navy); color:#C7D0DA; padding:48px 0 24px; }
+  footer{ background:var(--navy); color:#B7C0D6; padding:44px 0 96px; }
   .footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:36px; margin-bottom:32px; }
-  .footer-brand{ display:flex; align-items:center; gap:10px; color:var(--paper); margin-bottom:12px; }
-  .footer-brand b{ font-size:15px; font-weight:600; }
+  .footer-brand{ display:flex; align-items:center; gap:9px; color:var(--white); margin-bottom:12px; }
+  .footer-brand b{ font-size:15px; font-weight:700; font-family:"Space Grotesk",sans-serif; }
   .footer-grid p{ font-size:13px; line-height:1.6; max-width:320px; }
-  .footer-grid h4{ font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--gold-light); margin:0 0 12px; font-weight:600; }
+  .footer-grid h4{ font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--yellow); margin:0 0 12px; font-weight:600; }
   .footer-grid ul{ list-style:none; margin:0; padding:0; display:grid; gap:8px; }
-  .footer-grid a{ color:#C7D0DA; text-decoration:none; font-size:13px; }
-  .footer-grid a:hover{ color:var(--gold-light); }
-  .footer-bottom{ border-top:1px solid rgba(255,255,255,0.15); padding-top:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:12px; color:#8FA0AF; }
-  .footer-bottom button{ background:none; border:none; color:#8FA0AF; font-size:12px; cursor:pointer; text-decoration:underline; }
+  .footer-grid a{ color:#B7C0D6; text-decoration:none; font-size:13px; }
+  .footer-grid a:hover{ color:var(--white); }
+  .footer-bottom{ border-top:1px solid rgba(255,255,255,0.12); padding-top:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:12px; color:#7A87A6; }
+  .footer-bottom button{ background:none; border:none; color:#7A87A6; font-size:12px; cursor:pointer; text-decoration:underline; }
+  @media (max-width:820px){ footer{ padding-bottom:120px; } }
+
+  /* ============ bottom app-style nav (mobile) ============ */
+  .bottom-nav{ display:none; }
+  @media (max-width:820px){
+    .bottom-nav{ display:flex; position:fixed; bottom:0; left:0; right:0; background:var(--white); border-top:1px solid var(--line); z-index:58; padding:8px 6px 10px; justify-content:space-around; }
+    .bottom-nav button{ background:none; border:none; display:flex; flex-direction:column; align-items:center; gap:3px; color:var(--ink-soft); font-size:10.5px; font-weight:600; cursor:pointer; padding:6px 10px; }
+    .bottom-nav button svg{ width:20px; height:20px; stroke:var(--ink-soft); }
+    .bottom-nav button.active{ color:var(--navy); }
+    .bottom-nav button.active svg{ stroke:var(--navy); }
+  }
 
   /* ============ floating cart + drawer ============ */
-  .floating-cart{ position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:var(--navy); color:var(--paper); border:1px solid var(--gold); padding:14px 24px; display:flex; align-items:center; gap:14px; z-index:55; cursor:pointer; font-family:"Inter",sans-serif; }
-  .floating-cart .badge{ background:var(--gold); color:var(--navy); padding:2px 10px; font-size:12.5px; font-weight:600; font-family:"IBM Plex Mono",monospace; }
+  .floating-cart{ position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:var(--navy); color:var(--white); border:none; padding:14px 24px; display:flex; align-items:center; gap:14px; z-index:55; cursor:pointer; font-family:"Inter",sans-serif; border-radius:999px; box-shadow:0 10px 24px rgba(22,33,63,0.32); }
+  .floating-cart .badge{ background:var(--yellow); color:var(--navy); padding:2px 10px; font-size:12.5px; font-weight:700; font-family:"IBM Plex Mono",monospace; border-radius:999px; }
   .floating-cart .total{ font-family:"IBM Plex Mono",monospace; font-weight:600; }
   .floating-cart[hidden]{ display:none; }
-  .overlay{ position:fixed; inset:0; background:rgba(14,35,56,0.55); z-index:70; display:flex; align-items:flex-end; justify-content:center; }
+  @media (max-width:820px){ .floating-cart{ bottom:76px; } }
+  .overlay{ position:fixed; inset:0; background:rgba(14,23,48,0.5); z-index:70; display:flex; align-items:flex-end; justify-content:center; }
   .overlay[hidden]{ display:none; }
-  .drawer{ background:var(--paper); width:100%; max-width:540px; max-height:86vh; padding:24px; overflow-y:auto; border-top:3px solid var(--gold); }
+  .drawer{ background:var(--white); width:100%; max-width:540px; max-height:86vh; padding:24px; overflow-y:auto; border-top:1px solid var(--line); border-radius:22px 22px 0 0; }
   .drawer-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; }
-  .drawer-head h3{ margin:0; font-size:20px; font-weight:600; }
+  .drawer-head h3{ margin:0; font-size:19px; font-weight:700; color:var(--navy); }
   .close-btn{ background:none; border:none; font-size:24px; color:var(--ink-soft); cursor:pointer; }
   .cart-line{ display:flex; align-items:center; gap:10px; padding:11px 0; border-bottom:1px solid var(--line); }
-  .cart-line .name{ flex:1; font-size:14px; font-weight:500; }
+  .cart-line .name{ flex:1; font-size:14px; font-weight:500; color:var(--ink); }
   .cart-line .line-price{ font-family:"IBM Plex Mono",monospace; font-size:13.5px; width:66px; text-align:right; }
-  .cart-line .mini-qty{ display:flex; align-items:center; gap:6px; background:var(--navy); padding:4px 7px; }
-  .cart-line .mini-qty button{ background:var(--gold); border:none; width:20px;height:20px; font-weight:700; cursor:pointer; }
-  .cart-line .mini-qty span{ color:var(--paper); font-family:"IBM Plex Mono",monospace; font-size:13px; min-width:14px; text-align:center; }
+  .cart-line .mini-qty{ display:flex; align-items:center; gap:6px; background:var(--navy); padding:4px 8px; border-radius:999px; }
+  .cart-line .mini-qty button{ background:var(--yellow); border:none; width:20px;height:20px; border-radius:50%; font-weight:700; cursor:pointer; color:var(--navy); }
+  .cart-line .mini-qty span{ color:var(--white); font-family:"IBM Plex Mono",monospace; font-size:13px; min-width:14px; text-align:center; }
   .cart-empty{ text-align:center; padding:34px 10px; color:var(--ink-soft); font-size:14px; }
-  .cart-total-row{ display:flex; justify-content:space-between; align-items:center; padding:18px 0 8px; font-size:16.5px; font-weight:600; }
+  .cart-total-row{ display:flex; justify-content:space-between; align-items:center; padding:18px 0 8px; font-size:16px; font-weight:700; color:var(--navy); }
   .cart-total-row .val{ font-family:"IBM Plex Mono",monospace; }
 
-  /* ============ customer details form in drawer ============ */
   .customer-fields{ display:grid; gap:10px; margin:16px 0 4px; padding-top:14px; border-top:1px dashed var(--line); }
   .customer-fields label{ font-size:11.5px; font-weight:600; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.04em; display:block; margin-bottom:4px; }
-  .customer-fields input{ width:100%; padding:10px 12px; border:1px solid var(--line); font-size:14px; font-family:"Inter",sans-serif; background:#fff; }
+  .customer-fields input{ width:100%; padding:10px 12px; border:1.5px solid var(--line); border-radius:10px; font-size:14px; font-family:"Inter",sans-serif; background:var(--white); }
   .customer-fields input:focus{ outline:none; border-color:var(--navy); }
   .field-row{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-  .field-error{ font-size:11.5px; color:var(--maroon); margin-top:4px; display:none; }
+  .field-error{ font-size:11.5px; color:var(--orange); margin-top:4px; display:none; }
   .field-error.show{ display:block; }
 
-  .confirm-btn{ width:100%; background:#1E7A45; color:#fff; border:none; padding:15px; font-weight:600; font-size:15px; cursor:pointer; margin-top:14px; font-family:"Inter",sans-serif; }
-  .confirm-btn:disabled{ background:#9BB3A6; cursor:not-allowed; }
+  .confirm-btn{ width:100%; background:var(--green); color:#fff; border:none; padding:15px; font-weight:700; font-size:15px; cursor:pointer; margin-top:14px; font-family:"Inter",sans-serif; border-radius:999px; }
+  .confirm-btn:disabled{ background:#A9CBB8; cursor:not-allowed; }
   .fine-print{ font-size:11.5px; color:var(--ink-soft); text-align:center; margin-top:10px; }
-  .cod-note{ background:var(--paper-2); border:1px solid var(--line); padding:10px 12px; font-size:12px; color:var(--ink-soft); margin-top:10px; display:flex; gap:8px; align-items:flex-start; }
-  .cod-note .tick{ color:var(--forest); font-weight:700; flex:0 0 auto; }
+  .cod-note{ background:var(--cream); border:1px solid var(--line); border-radius:12px; padding:10px 12px; font-size:12px; color:var(--green); margin-top:10px; display:flex; gap:8px; align-items:flex-start; }
+  .cod-note .tick{ font-weight:700; flex:0 0 auto; }
 
   /* ============ admin ============ */
-  .admin-drawer{ background:var(--paper); width:100%; max-width:760px; max-height:90vh; padding:26px; overflow-y:auto; border-top:3px solid var(--gold); }
+  .admin-drawer{ background:var(--white); width:100%; max-width:760px; max-height:90vh; padding:26px; overflow-y:auto; border-radius:22px 22px 0 0; }
   .admin-stats{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:18px 0 22px; }
-  .admin-stat{ background:#fff; border:1px solid var(--line); padding:16px; }
+  .admin-stat{ background:var(--cream); border:1px solid var(--line); border-radius:14px; padding:16px; }
   .admin-stat .lbl{ font-size:11.5px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.05em; }
-  .admin-stat .val{ font-family:"Fraunces",serif; font-size:24px; font-weight:600; color:var(--navy); margin-top:4px; }
+  .admin-stat .val{ font-family:"Space Grotesk",sans-serif; font-size:23px; font-weight:700; color:var(--navy); margin-top:4px; }
   table.admin-table{ width:100%; border-collapse:collapse; font-size:13px; }
   table.admin-table th, table.admin-table td{ text-align:left; padding:9px 8px; border-bottom:1px solid var(--line); }
   table.admin-table th{ font-family:"IBM Plex Mono",monospace; font-size:11px; text-transform:uppercase; color:var(--ink-soft); }
   .admin-empty{ text-align:center; padding:30px; color:var(--ink-soft); font-size:14px; }
-  .admin-clear{ margin-top:16px; background:transparent; border:1px solid var(--maroon); color:var(--maroon); padding:9px 16px; font-size:12.5px; cursor:pointer; }
-  .admin-sync-note{ font-size:12px; padding:10px 12px; margin-top:14px; border:1px solid var(--line); background:var(--paper-2); color:var(--ink-soft); }
-  .admin-sync-note.ok{ border-color:var(--forest); color:var(--forest); }
-  .admin-sync-note.warn{ border-color:var(--gold); color:var(--maroon); }
+  .admin-clear{ margin-top:16px; background:transparent; border:1.5px solid var(--orange); color:var(--orange); padding:9px 16px; font-size:12.5px; cursor:pointer; border-radius:999px; }
+  .admin-sync-note{ font-size:12px; padding:10px 12px; margin-top:14px; border:1px solid var(--line); border-radius:10px; background:var(--cream); color:var(--ink-soft); }
+  .admin-sync-note.ok{ border-color:var(--green); color:var(--green); }
+  .admin-sync-note.warn{ border-color:var(--orange); color:var(--orange); }
 
   @media (max-width:820px){
-    .hero-grid{ grid-template-columns:1fr; }
     .about-grid{ grid-template-columns:1fr; }
-    .trust-grid{ grid-template-columns:repeat(2,1fr); }
-    .trust-item:nth-child(3){ border-left:none; }
     .how-grid{ grid-template-columns:1fr; }
     .footer-grid{ grid-template-columns:1fr; }
-    .topnav-links{ display:none; }
     .field-row{ grid-template-columns:1fr; }
   }
 </style>
 </head>
 <body>
 
-<div class="urgency-banner" id="urgencyBanner">Move-in week special — stocked and delivering now for the 2026/2027 intake</div>
-
 <nav class="topnav">
   <div class="topnav-inner">
-    <div class="topnav-brand"><div class="crest">FT</div><b>Fresher's Trunk</b></div>
+    <div class="topnav-brand"><div class="crest"><div class="dot"></div></div><b>Nafuu</b></div>
     <div class="topnav-links">
       <a href="#about">About</a>
       <a href="#shop">Shop</a>
       <a href="#how">How it works</a>
       <a href="#faq">FAQ</a>
     </div>
-    <button class="topnav-cart" onclick="openCart()">Order list <span class="n" id="headerCount">0</span></button>
+    <div class="nav-actions">
+      <button class="icon-btn" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})" aria-label="Search essentials">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="topnav-cart" onclick="openCart()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6L4 3H2"/></svg>
+        Cart <span class="n" id="headerCount">0</span>
+      </button>
+    </div>
   </div>
 </nav>
 
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <span class="eyebrow">2026/2027 intake · freshers' supplies</span>
-      <h1>Everything for your hostel room, priced honestly for <em>UoN freshers.</em></h1>
-      <p>Padlocks, notebooks, noodles and bathroom essentials — the same items sold at the campus market, delivered to your hostel at a fairer price. Add what you need, confirm on WhatsApp, and pay only once it's in your hands.</p>
-      <div class="trust-ribbon">
-        <div class="trust-pill"><span class="dot"></span>Pay only on delivery</div>
-        <div class="trust-pill"><span class="dot"></span>No deposit, no upfront transfer</div>
-        <div class="trust-pill"><span class="dot"></span>Real person on WhatsApp</div>
-      </div>
-      <div class="hero-ctas">
-        <a href="#shop" class="btn-gold">Shop essentials</a>
-        <a href="https://wa.me/254713781789?text=Hi%20Fresher's%20Trunk%2C%20I%20have%20a%20question." class="btn-ghost" target="_blank">WhatsApp us</a>
-      </div>
-      <div class="contact-strip">
-        <span>Order via WhatsApp: <b>0713 781 789</b></span>
-        <span>Payment: <b>On delivery</b></span>
-        <span>Delivery: <b>Hall / hostel drop-off</b></span>
-      </div>
-    </div>
-    <div class="hero-image">
-      <div class="image-slot" onclick="document.getElementById('file-hero').click()">
-        <div class="placeholder" id="ph-hero">
-          <div class="plus">+</div>
-          <span>images/hero.jpg — hostel or product photo</span>
-        </div>
-        <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
-        <input type="file" accept="image/*" id="file-hero" onchange="handleGenericUpload(event,'ph-hero')">
-      </div>
+  <div class="wrap hero-inner">
+    <div class="hero-badge"><span class="dot"></span>Freshers' Week · Save up to 33%</div>
+    <h1>Everything you need for <em>hostel life.</em></h1>
+    <p>Without the campus market markup. Hostel essentials delivered to your door — pay only once it's in your hands.</p>
+    <div class="hero-ctas">
+      <a href="#shop" class="btn-solid">Start Shopping <span>→</span></a>
+      <a href="https://wa.me/254713781789?text=Hi%20Fresher's%20Trunk%2C%20I%20have%20a%20question." class="btn-outline" target="_blank">WhatsApp Us</a>
     </div>
   </div>
 </section>
 
-<section class="trust-strip">
-  <div class="wrap trust-grid">
-    <div class="trust-item"><div class="num">0%</div><div class="lbl">Markup on noodles &amp; essentials</div></div>
-    <div class="trust-item"><div class="num">6</div><div class="lbl">Items stocked for hostel move-in</div></div>
-    <div class="trust-item"><div class="num">On delivery</div><div class="lbl">You pay only once it arrives</div></div>
-    <div class="trust-item"><div class="num">&lt; 1 hr</div><div class="lbl">Typical WhatsApp response</div></div>
+<section class="hero-photo">
+  <div class="image-slot" onclick="document.getElementById('file-hero').click()">
+    <img src="images/hero-essentials.jpg" alt="Nafuu essentials — bucket, lamp, books, padlock, basin, slippers">
+    <input type="file" accept="image/*" id="file-hero" onchange="handleGenericUpload(event,'ph-hero')">
   </div>
+  <div class="sticker"><b>Bei Nafuu.</b><span>Hostel life sorted.</span></div>
 </section>
 
-<section class="proof-strip">
-  <p>Trusted by freshers moving into halls this intake — <b>ask us for references from students in your hall</b> before you order, any time.</p>
+<div class="feature-strip-wrap wrap">
+  <div class="feature-strip">
+    <div class="feature-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="7" width="14" height="10"/><path d="M15 10h4l3 3v4h-7z"/><circle cx="6" cy="19.5" r="1.5"/><circle cx="17.5" cy="19.5" r="1.5"/></svg>
+      <span>Hostel Delivery</span>
+    </div>
+    <div class="feature-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 10h20"/><circle cx="17" cy="15" r="1.5"/></svg>
+      <span>Pay on Delivery</span>
+    </div>
+    <div class="feature-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+      <span>Student Trusted</span>
+    </div>
+  </div>
+</div>
+
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span><span class="star">★</span>Bei Nafuu<span class="star">★</span>Study hard, we'll handle shopping<span class="star">★</span>No campus market markup<span class="star">★</span>Pay only on delivery<span class="star">★</span>Freshers trust us<span class="star">★</span>Built by students<span class="star">★</span></span>
+    <span><span class="star">★</span>Bei Nafuu<span class="star">★</span>Study hard, we'll handle shopping<span class="star">★</span>No campus market markup<span class="star">★</span>Pay only on delivery<span class="star">★</span>Freshers trust us<span class="star">★</span>Built by students<span class="star">★</span></span>
+  </div>
+</div>
+
+<section class="campus-banner">
+  <div class="campus-caption-wrap">
+    <div class="image-slot" onclick="document.getElementById('file-campus').click()">
+      <img src="images/bundle-freshers.jpg" alt="Nafuu hostel bundle — basins, padlocks, notebooks, plates, mugs, slippers, storage box">
+      <input type="file" accept="image/*" id="file-campus" onchange="handleGenericUpload(event,'ph-campus')">
+    </div>
+    <div class="campus-caption"><span class="dot"></span>The full fresher's bundle, laid out</div>
+  </div>
 </section>
 
 <section class="about-section" id="about">
@@ -312,13 +344,12 @@
         <div class="plus">+</div>
         <span>images/about.jpg — team or stock photo</span>
       </div>
-      <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
       <input type="file" accept="image/*" id="file-about" onchange="handleGenericUpload(event,'ph-about')">
     </div>
     <div>
       <span class="eyebrow">Who we are</span>
-      <h2 style="font-size:28px; font-weight:600; margin:12px 0 12px;">Run by students, for students</h2>
-      <p style="font-size:14.5px; line-height:1.65; color:var(--ink-soft); max-width:520px;">Fresher's Trunk started with a simple observation: the small campus stalls that freshers rely on in their first week charge more than they need to for the same padlocks, notebooks and bathroom basics. We stock the same essentials and pass on the difference — while still running a fair, sustainable business.</p>
+      <h2 style="font-size:27px; font-weight:700; margin:12px 0 12px; color:var(--navy);">Run by students, for students</h2>
+      <p style="font-size:14.5px; line-height:1.65; color:var(--ink-soft); max-width:520px;">Nafuu started with a simple observation: the small campus stalls that freshers rely on in their first week charge more than they need to for the same padlocks, notebooks and bathroom basics. We stock the same essentials and pass on the difference — while still running a fair, sustainable business.</p>
       <p style="font-size:14.5px; line-height:1.65; color:var(--ink-soft); max-width:520px;">We know first week is when trust matters most, which is why we don't ask for any payment upfront — you only pay once your order is physically in your hands and you've checked it's correct.</p>
       <ul class="about-points">
         <li>Prices checked against the campus market for every item we list</li>
@@ -327,7 +358,7 @@
         <li>Delivery straight to your hall or hostel — no trip to the stalls required</li>
         <li>Zero upfront payment — nothing changes hands until your order is in front of you</li>
       </ul>
-      <p class="disclaimer" style="font-size:11.5px; color:var(--ink-soft); margin-top:18px; max-width:520px; line-height:1.5;">Fresher's Trunk is an independent, student-run supply service serving the University of Nairobi community. It is not an official University of Nairobi enterprise.</p>
+      <p class="disclaimer" style="font-size:11.5px; color:var(--ink-soft); margin-top:18px; max-width:520px; line-height:1.5;">Nafuu is an independent, student-run supply service serving the University of Nairobi community. It is not an official University of Nairobi enterprise.</p>
     </div>
   </div>
 </section>
@@ -340,9 +371,9 @@
       <p>Every item below shows the campus market price alongside ours, so the difference is never hidden.</p>
     </div>
     <div class="key-bar">
-      <div class="key-item"><span class="key-dot" style="background:var(--maroon)"></span> Campus market price</div>
-      <div class="key-item"><span class="key-dot" style="background:var(--forest)"></span> You save with us</div>
+      <div class="key-item"><span class="key-dot" style="background:var(--green)"></span> Discount vs. campus market</div>
       <div class="key-item"><span class="key-dot" style="background:var(--ink-soft)"></span> Essential — same price everywhere</div>
+      <div class="key-item"><span class="key-dot" style="background:var(--orange)"></span> Coming soon</div>
     </div>
     <nav class="cat-nav" id="catNav"></nav>
     <div id="main"></div>
@@ -392,7 +423,7 @@
         <p>We'll let you know on WhatsApp as soon as we see your order, and suggest the nearest alternative or an updated delivery time.</p>
       </details>
       <details>
-        <summary>Can I ask about an item that isn't listed yet, like patapata?</summary>
+        <summary>Can I ask about an item that isn't listed yet, like patapata or a bucket?</summary>
         <p>Yes — tap "Ask on WhatsApp" on that item's card, or message us directly. We're adding items as we confirm fair pricing for each one.</p>
       </details>
     </div>
@@ -403,7 +434,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand"><div class="crest">FT</div><b>Fresher's Trunk</b></div>
+        <div class="footer-brand"><div class="crest"><div class="dot"></div></div><b>Nafuu</b></div>
         <p>Hostel essentials for University of Nairobi freshers, priced fairly and delivered to your door. Pay only on delivery. Independent, student-run — not an official University of Nairobi enterprise.</p>
       </div>
       <div>
@@ -424,11 +455,30 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Fresher's Trunk · Nairobi, Kenya</span>
+      <span>&copy; 2026 Nafuu · Nairobi, Kenya</span>
       <button onclick="openAdmin()">⚙ Admin</button>
     </div>
   </div>
 </footer>
+
+<nav class="bottom-nav" id="bottomNav">
+  <button class="active" data-target="top" onclick="bottomNavGo('top', this)">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+    Home
+  </button>
+  <button data-target="shop" onclick="bottomNavGo('shop', this)">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+    Shop
+  </button>
+  <button data-target="how" onclick="bottomNavGo('how', this)">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+    How it works
+  </button>
+  <button data-target="faq" onclick="bottomNavGo('faq', this)">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 015 0c0 1.5-2 2-2 3.5"/><circle cx="12" cy="17" r="0.5"/></svg>
+    FAQ
+  </button>
+</nav>
 
 <button class="floating-cart" id="floatingCart" hidden onclick="openCart()">
   <span>View order</span>
@@ -468,7 +518,7 @@
 
 <div class="overlay" id="adminOverlay" hidden onclick="closeIfOverlay(event,'adminOverlay',closeAdmin)">
   <div class="admin-drawer">
-    <div class="drawer-head"><h3>Fresher's Trunk — order log</h3><button class="close-btn" onclick="closeAdmin()">&times;</button></div>
+    <div class="drawer-head"><h3>Nafuu — order log</h3><button class="close-btn" onclick="closeAdmin()">&times;</button></div>
     <p style="font-size:12.5px; color:var(--ink-soft); margin-top:-6px;">Local mirror of orders confirmed from this device. Full order log lives in the connected Google Sheet — see sync status below.</p>
     <div class="admin-stats">
       <div class="admin-stat"><div class="lbl">Total orders</div><div class="val" id="adminTotalOrders">0</div></div>
@@ -503,7 +553,8 @@ const products = [
   { id:"book120", category:"Books", name:"Notebook — 120 pages", filename:"120.webp", ourPrice:80, clabuLow:120, clabuHigh:120 },
   { id:"book96", category:"Books", name:"Notebook — 96 pages", filename:"96.webp", ourPrice:70, clabuLow:85, clabuHigh:85 },
   { id:"noodles", category:"Kitchen", name:"Noodles (packet)", filename:"noodles.webp", ourPrice:50, clabuLow:50, clabuHigh:50, samePrice:true, note:"An essential — priced the same everywhere" },
-  { id:"crocs", category:"Bathroom", name:"Crocs (bathroom slippers)", filename:"crocs.webp", ourPrice:200, clabuLow:250, clabuHigh:300 },
+  { id:"crocs", category:"Bathroom", name:"Crocs (bathroom slippers)", filename:"product-slippers.jpg", ourPrice:200, clabuLow:250, clabuHigh:300 },
+  { id:"bucket", category:"Bathroom", name:"Bucket (with lid)", filename:"product-bucket.jpg", comingSoon:true, note:"Price to be confirmed" },
   { id:"patapata", category:"Bathroom", name:"Patapata (bathing slippers)", filename:"patapata.webp", comingSoon:true, note:"Price to be confirmed" },
 ];
 
@@ -512,6 +563,10 @@ let cart = {};
 const uploadedImages = {};
 
 function money(n){ return "Ksh " + n.toLocaleString(); }
+function discountPercent(p){
+  if (p.comingSoon || p.samePrice) return null;
+  return Math.round(((p.clabuLow - p.ourPrice) / p.clabuLow) * 100);
+}
 
 /* ---- cart persistence (survives refresh) ---- */
 function loadCart(){
@@ -566,7 +621,6 @@ function imageSlotHTML(p){
         : `<img src="images/${p.filename}" alt="${p.name}" onerror="this.style.display='none'">
            <div class="placeholder" id="ph-${p.id}"><div class="plus">+</div><span>images/${p.filename}</span></div>`
       }
-      <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
       <input type="file" accept="image/*" id="file-${p.id}" onchange="handleUpload(event, '${p.id}')">
     </div>`;
 }
@@ -594,6 +648,7 @@ function handleGenericUpload(e, phId){
   reader.onload = () => {
     const slot = e.target.closest('.image-slot');
     const ph = document.getElementById(phId); if (ph) ph.remove();
+    const oldImg = slot.querySelector('img'); if (oldImg) oldImg.remove();
     const img = document.createElement('img');
     img.src = reader.result;
     slot.prepend(img);
@@ -602,23 +657,31 @@ function handleGenericUpload(e, phId){
 }
 
 function renderCard(p){
-  const priceBlock = p.comingSoon
-    ? `<div class="price-tag"><div class="prices"><span class="our-price">Coming soon</span></div></div>`
+  const pct = discountPercent(p);
+  const corner = p.comingSoon
+    ? `<span class="soon-corner">Coming soon</span>`
     : p.samePrice
-      ? `<div class="price-tag"><div class="prices"><span class="our-price">${money(p.ourPrice)}</span></div><span class="same-price-badge">Same as market</span></div>`
-      : `<div class="price-tag">
+      ? `<span class="same-corner">Same as market</span>`
+      : `<span class="discount-corner">-${pct}%</span>`;
+
+  const priceBlock = p.comingSoon
+    ? `<div class="price-row"><div class="prices"><span class="our-price">Price TBC</span></div></div>`
+    : p.samePrice
+      ? `<div class="price-row"><div class="prices"><span class="our-price">${money(p.ourPrice)}</span></div></div>`
+      : `<div class="price-row">
            <div class="prices">
              <span class="clabu-price">${p.clabuLow===p.clabuHigh ? money(p.clabuLow) : `Ksh ${p.clabuLow}\u2013${p.clabuHigh}`}</span>
              <span class="our-price">${money(p.ourPrice)}</span>
            </div>
-           <span class="save-badge">Save ${money(p.clabuLow - p.ourPrice)}${p.clabuHigh>p.clabuLow ? '+' : ''}</span>
+           <span class="save-line">Save ${money(p.clabuLow - p.ourPrice)}${p.clabuHigh>p.clabuLow ? '+' : ''}</span>
          </div>`;
 
   const controls = p.comingSoon
     ? `<button class="coming-soon-btn" onclick="enquire('${p.name}')">Ask on WhatsApp</button>`
-    : `<div id="ctrl-${p.id}">${cart[p.id] ? qtyRowHTML(p.id) : `<button class="add-btn" onclick="addItem('${p.id}')">Add to order</button>`}</div>`;
+    : `<div id="ctrl-${p.id}">${cart[p.id] ? qtyRowHTML(p.id) : `<button class="add-btn" onclick="addItem('${p.id}')"><span>+</span> Add to order</button>`}</div>`;
 
   return `<div class="card${p.comingSoon ? ' soon' : ''}">
+      ${corner}
       ${imageSlotHTML(p)}
       <div class="card-body">
         <p class="card-name">${p.name}</p>
@@ -645,7 +708,8 @@ function changeQty(id, delta){
   const ctrl = document.getElementById('ctrl-'+id);
   if (cart[id] <= 0){
     delete cart[id];
-    ctrl.innerHTML = `<button class="add-btn" onclick="addItem('${id}')">Add to order</button>`;
+    const p = products.find(x=>x.id===id);
+    ctrl.innerHTML = `<button class="add-btn" onclick="addItem('${id}')"><span>+</span> Add to order</button>`;
   } else {
     ctrl.innerHTML = qtyRowHTML(id);
   }
@@ -743,9 +807,6 @@ function logOrderLocally(entry){
   saveOrders(orders);
 }
 
-/* Sends the order to the central Google Sheet webhook, if configured.
-   Falls back silently to local-only logging if no URL is set or the request fails —
-   the WhatsApp message still goes out either way, so an order is never blocked. */
 async function logOrderToSheet(entry){
   if (!GAS_WEBHOOK_URL) return { synced:false, reason:"not_configured" };
   try {
@@ -780,7 +841,7 @@ async function confirmOrder(){
   });
   const total = cartTotal();
 
-  let msg = `Hi Fresher's Trunk! I'd like to order:\n`;
+  let msg = `Hi Nafuu! I'd like to order:\n`;
   itemLines.forEach(l => { msg += `• ${l.name} x${l.qty} — ${money(l.lineTotal)}\n`; });
   msg += `\nTotal: ${money(total)}`;
   msg += `\n\nName: ${name}\nHall/Hostel: ${hall}\nRoom: ${room}`;
@@ -794,9 +855,8 @@ async function confirmOrder(){
   };
 
   logOrderLocally(entry);
-  logOrderToSheet(entry); // best-effort central log; doesn't block WhatsApp send
+  logOrderToSheet(entry);
 
-  // clear cart after a confirmed order, keep name/hall/room for next time
   cart = {};
   saveCart();
   updateFloatingCart();
@@ -807,8 +867,16 @@ async function confirmOrder(){
 }
 
 function enquire(name){
-  const msg = `Hi Fresher's Trunk! I'd like to ask about the price and availability of: ${name}`;
+  const msg = `Hi Nafuu! I'd like to ask about the price and availability of: ${name}`;
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+/* ---- bottom nav ---- */
+function bottomNavGo(target, btn){
+  document.querySelectorAll('.bottom-nav button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  if (target === 'top'){ window.scrollTo({top:0, behavior:'smooth'}); }
+  else { document.getElementById(target).scrollIntoView({behavior:'smooth', block:'start'}); }
 }
 
 /* ---- admin ---- */
