@@ -9,14 +9,14 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Nafuu | Hostel Essentials for UoN Freshers">
 <meta property="og:description" content="Padlocks, notebooks, noodles and bathroom essentials, fairer prices than the campus market. Order on WhatsApp, pay on delivery.">
-<meta property="og:image" content="images/og-cover.jpg">
+<meta property="og:image" content="og-cover.jpg">
 <meta property="og:url" content="https://nafuu.example/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Nafuu | Hostel Essentials for UoN Freshers">
 <meta name="twitter:description" content="Padlocks, notebooks, noodles and bathroom essentials, fairer prices than the campus market. Pay on delivery.">
-<meta name="twitter:image" content="images/og-cover.jpg">
+<meta name="twitter:image" content="og-cover.jpg">
 
-<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -297,7 +297,7 @@
 
 <section class="hero-photo">
   <div class="image-slot" onclick="document.getElementById('file-hero').click()">
-    <img src="images/hero-essentials.jpg" alt="Nafuu essentials: bucket, lamp, books, padlock, basin, slippers">
+    <img src="hero-essentials.jpg" alt="Nafuu essentials: bucket, lamp, books, padlock, basin, slippers">
     <input type="file" accept="image/*" id="file-hero" onchange="handleGenericUpload(event,'ph-hero')">
   </div>
   <div class="sticker"><b>Bei Nafuu.</b><span>Hostel life sorted.</span></div>
@@ -330,7 +330,7 @@
 <section class="campus-banner">
   <div class="campus-caption-wrap">
     <div class="image-slot" onclick="document.getElementById('file-campus').click()">
-      <img src="images/bundle-freshers.jpg" alt="Nafuu hostel bundle: basins, padlocks, notebooks, plates, mugs, slippers, storage box">
+      <img src="bundle-freshers.jpg" alt="Nafuu hostel bundle: basins, padlocks, notebooks, plates, mugs, slippers, storage box">
       <input type="file" accept="image/*" id="file-campus" onchange="handleGenericUpload(event,'ph-campus')">
     </div>
     <div class="campus-caption"><span class="dot"></span>The full fresher's bundle, laid out</div>
@@ -340,7 +340,7 @@
 <section class="about-section" id="about">
   <div class="wrap about-grid">
     <div class="image-slot" onclick="document.getElementById('file-about').click()">
-      <img src="images/hero-essentials.jpg" alt="Nafuu essentials: bucket, lamp, books, padlock, basin, slippers">
+      <img src="hero-essentials.jpg" alt="Nafuu essentials: bucket, lamp, books, padlock, basin, slippers">
       <input type="file" accept="image/*" id="file-about" onchange="handleGenericUpload(event,'ph-about')">
     </div>
     <div>
@@ -615,8 +615,8 @@ function imageSlotHTML(p){
   return `<div class="image-slot" onclick="document.getElementById('file-${p.id}').click()">
       ${uploaded
         ? `<img src="${uploaded}" alt="${p.name}">`
-        : `<img src="images/${p.filename}" alt="${p.name}" onerror="this.style.display='none'">
-           <div class="placeholder" id="ph-${p.id}"><div class="plus">+</div><span>images/${p.filename}</span></div>`
+        : `<img src="${p.filename}" alt="${p.name}" onerror="this.style.display='none'">
+           <div class="placeholder" id="ph-${p.id}"><div class="plus">+</div><span>${p.filename}</span></div>`
       }
       <input type="file" accept="image/*" id="file-${p.id}" onchange="handleUpload(event, '${p.id}')">
     </div>`;
