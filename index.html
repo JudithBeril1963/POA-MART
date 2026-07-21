@@ -211,19 +211,15 @@
   .waitlist-copy .eyebrow{ color:var(--yellow); }
   .waitlist-copy h2{ font-size:clamp(24px,3.4vw,34px); color:var(--white); margin:10px 0 14px; }
   .waitlist-copy p{ font-size:14.5px; line-height:1.65; color:#C5CEE6; max-width:420px; margin:0 0 18px; }
-  .waitlist-count{ display:inline-flex; align-items:center; gap:8px; background:rgba(242,183,5,0.14); border:1px solid rgba(242,183,5,0.4); color:var(--yellow); border-radius:999px; padding:8px 16px; font-size:12.5px; font-weight:700; }
   .waitlist-form{ background:var(--white); border-radius:20px; padding:26px; box-shadow:0 20px 44px rgba(0,0,0,0.25); }
   .waitlist-form label{ font-size:11.5px; font-weight:600; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.04em; display:block; margin-bottom:5px; }
   .waitlist-form input{ width:100%; padding:12px 14px; border:1.5px solid var(--line); border-radius:10px; font-size:14px; font-family:"Inter",sans-serif; background:var(--white); color:var(--ink); margin-bottom:14px; }
   .waitlist-form input:focus{ outline:none; border-color:var(--navy); }
+  .waitlist-form select{ width:100%; padding:12px 14px; border:1.5px solid var(--line); border-radius:10px; font-size:14px; font-family:"Inter",sans-serif; background:var(--white); color:var(--ink); margin-bottom:14px; }
+  .waitlist-form select:focus{ outline:none; border-color:var(--navy); }
   .waitlist-submit{ width:100%; background:var(--green); color:#fff; border:none; padding:15px; font-weight:700; font-size:15px; cursor:pointer; border-radius:999px; font-family:"Inter",sans-serif; }
   .waitlist-submit:disabled{ background:#A9CBB8; cursor:not-allowed; }
   .waitlist-note{ font-size:11.5px; color:var(--ink-soft); text-align:center; margin-top:10px; }
-  .waitlist-success{ display:none; text-align:center; padding:20px 6px; }
-  .waitlist-success.show{ display:block; }
-  .waitlist-success .check{ width:52px; height:52px; border-radius:50%; background:var(--green); color:#fff; display:flex; align-items:center; justify-content:center; margin:0 auto 14px; font-size:24px; }
-  .waitlist-success h3{ color:var(--navy); font-size:18px; margin:0 0 6px; }
-  .waitlist-success p{ color:var(--ink-soft); font-size:13.5px; margin:0; }
   .field-error{ font-size:11.5px; color:var(--orange); margin:-8px 0 12px; display:none; }
   .field-error.show{ display:block; }
   @media (max-width:860px){ .waitlist-inner{ grid-template-columns:1fr; } }
@@ -454,10 +450,9 @@
   <div class="wrap waitlist-inner">
     <div class="waitlist-copy">
       <span class="eyebrow">Early access</span>
-      <h2>Join our Freshers' Week waitlist</h2>
+      <h2>Join the UoN Freshers Waitlist</h2>
       <p>Be among the first students to receive exclusive launch offers. Ordering isn't open yet, we'll notify you the moment it is.</p>
       <p style="font-weight:700; color:var(--yellow); font-size:14.5px; margin:0 0 14px;">Join the first 100 students to access Freshers' Week offers.</p>
-      <div class="waitlist-count" id="waitlistCount">0 students on the list so far</div>
     </div>
     <div class="waitlist-form">
       <div id="waitlistFormFields">
@@ -465,20 +460,17 @@
         <input type="text" id="wlName" placeholder="e.g. Beryl Achieng" oninput="validateWaitlist()">
         <label for="wlPhone">Phone number</label>
         <input type="tel" id="wlPhone" placeholder="07XX XXX XXX" oninput="validateWaitlist()">
-        <label for="wlHall">Hall of residence</label>
-        <input type="text" id="wlHall" placeholder="e.g. Hall 9" oninput="validateWaitlist()">
-        <label for="wlCourse">Course</label>
-        <input type="text" id="wlCourse" placeholder="e.g. Civil Engineering">
-        <label for="wlEmail">Email (optional)</label>
-        <input type="email" id="wlEmail" placeholder="you@example.com">
-        <div class="field-error" id="wlError">Please fill in your name, phone number and hall.</div>
+        <label for="wlType">I am a</label>
+        <select id="wlType" onchange="validateWaitlist()">
+          <option value="">Select one</option>
+          <option value="Student">Student</option>
+          <option value="Parent">Parent</option>
+        </select>
+        <label for="wlHall">Hall of residence (if applicable)</label>
+        <input type="text" id="wlHall" placeholder="e.g. Hall 9">
+        <div class="field-error" id="wlError">Please fill in your name, phone number, and whether you're a student or parent.</div>
         <button class="waitlist-submit" id="wlSubmit" disabled onclick="submitWaitlist()">Join the Waitlist</button>
-        <div class="waitlist-note">We'll only use this to notify you when ordering opens.</div>
-      </div>
-      <div class="waitlist-success" id="waitlistSuccess">
-        <div class="check">&#10003;</div>
-        <h3>You're on the list!</h3>
-        <p>We'll message you on WhatsApp or SMS the moment ordering opens for Freshers' Week.</p>
+        <div class="waitlist-note">This opens WhatsApp with your details filled in, ready to send.</div>
       </div>
     </div>
   </div>
@@ -796,7 +788,6 @@
 const WHATSAPP_NUMBER = "254713781789";
 const CART_STORAGE_KEY = "nafuuCart";
 const CUSTOMER_STORAGE_KEY = "nafuuCustomer";
-const WAITLIST_STORAGE_KEY = "nafuuWaitlist";
 
 /* Optional: set this to a deployed Google Apps Script Web App URL to sync waitlist
    signups and orders to a private Google Sheet you control. Leave blank to store
@@ -849,26 +840,12 @@ function renderPacks(){
   `).join('');
 }
 
-/* ---- waitlist ---- */
-function loadWaitlist(){
-  try { return JSON.parse(localStorage.getItem(WAITLIST_STORAGE_KEY)) || []; }
-  catch(e){ return []; }
-}
-function saveWaitlistEntry(entry){
-  const list = loadWaitlist();
-  list.push(entry);
-  try { localStorage.setItem(WAITLIST_STORAGE_KEY, JSON.stringify(list)); } catch(e){}
-  return list.length;
-}
-function updateWaitlistCount(){
-  const n = loadWaitlist().length;
-  document.getElementById('waitlistCount').textContent = n === 1 ? "1 student on the list so far" : n + " students on the list so far";
-}
+/* ---- waitlist: WhatsApp only, no backend, no storage ---- */
 function validateWaitlist(){
   const name = document.getElementById('wlName').value.trim();
   const phone = document.getElementById('wlPhone').value.trim();
-  const hall = document.getElementById('wlHall').value.trim();
-  const ok = name.length > 1 && phone.length > 6 && hall.length > 0;
+  const type = document.getElementById('wlType').value;
+  const ok = name.length > 1 && phone.length > 6 && type.length > 0;
   document.getElementById('wlSubmit').disabled = !ok;
   document.getElementById('wlError').classList.remove('show');
   return ok;
@@ -888,20 +865,18 @@ function submitWaitlist(){
     document.getElementById('wlError').classList.add('show');
     return;
   }
-  const entry = {
-    type: "waitlist",
-    name: document.getElementById('wlName').value.trim(),
-    phone: document.getElementById('wlPhone').value.trim(),
-    hall: document.getElementById('wlHall').value.trim(),
-    course: document.getElementById('wlCourse').value.trim(),
-    email: document.getElementById('wlEmail').value.trim(),
-    date: new Date().toISOString()
-  };
-  saveWaitlistEntry(entry);
-  syncToSheet(entry);
-  updateWaitlistCount();
-  document.getElementById('waitlistFormFields').style.display = 'none';
-  document.getElementById('waitlistSuccess').classList.add('show');
+  const name = document.getElementById('wlName').value.trim();
+  const phone = document.getElementById('wlPhone').value.trim();
+  const type = document.getElementById('wlType').value;
+  const hall = document.getElementById('wlHall').value.trim();
+
+  let msg = `Hello Nafuu!\nI would like to join the University of Nairobi Freshers Waitlist.\n\n`;
+  msg += `Name: ${name}\n`;
+  msg += `Phone Number: ${phone}\n`;
+  msg += `I am a:\n${type}\n`;
+  msg += `Hall of Residence:\n${hall ? hall : "N/A"}`;
+
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
 /* ---- cart persistence (survives refresh) ---- */
@@ -1201,7 +1176,6 @@ renderNav();
 renderMain();
 renderPacks();
 updateFloatingCart();
-updateWaitlistCount();
 </script>
 
 </body>
